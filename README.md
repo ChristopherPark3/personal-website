@@ -1,15 +1,17 @@
 Notes for me:
 
-  Current Stack:
-  React
-  Next
-  Tailwind
-  NextUI
+  Part1: 
+    - Create initial TV like animation for first load of page
 
-  Potential libraries:
-  shadcn/ui
+  Part2:
+    -
 
-  Sections:
-  About Me
-  Projects
+  Part3:
+    -
+
+  Part4:
+    -
+    
+  Part5:
+    -
   

@@ -1,6 +1,6 @@
 import { Variants } from "framer-motion"
 
-const animateFunc = (variants: Variants) => {
+export const animateFunc = (variants: Variants) => {
   return {
     initial: 'initial',
     animate: 'enter',

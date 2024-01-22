@@ -1,10 +1,26 @@
+"use client";
+import InitialAnimation from "./components/initialPageLoad/initialAnimation";
+import { AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+
 export default function Home() {
+  // const [initialLoad, setInitialLoad] = useState(true);
+  // useEffect(() => {
+  //   const id = setTimeout(() => {
+  //     setInitialLoad(false)
+  //   }, 1000)
+
+  //   return () => clearTimeout(id)
+  // })
   return (
-    <></>
+    <AnimatePresence>
+      <InitialAnimation />
+    </AnimatePresence>
   );
 }
 
-{/* <div id="main-page-container" className="p-8 bg-slate-300">
+{
+  /* <div id="main-page-container" className="p-8 bg-slate-300">
       <div id="main-page" className="grid grid-cols-8 border-black">
         <div id="navbar" className="h-[100vh] bg-red-100">
           Navbar
@@ -31,4 +47,5 @@ export default function Home() {
           Filler 3
         </div>
       </div>
-    </div> */}
+    </div> */
+}
