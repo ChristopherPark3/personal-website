@@ -4,18 +4,21 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  // const [initialLoad, setInitialLoad] = useState(true);
-  // useEffect(() => {
-  //   const id = setTimeout(() => {
-  //     setInitialLoad(false)
-  //   }, 1000)
+  const [initialLoad, setInitialLoad] = useState(true);
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setInitialLoad(false);
+    }, 1500);
 
-  //   return () => clearTimeout(id)
-  // })
+    return () => clearTimeout(id);
+  }, []);
+
   return (
-    <AnimatePresence>
-      <InitialAnimation />
-    </AnimatePresence>
+    <div className="flex justify-center items-center">
+      <AnimatePresence>
+        {initialLoad && <InitialAnimation initialLoad={initialLoad} />}
+      </AnimatePresence>
+    </div>
   );
 }
 
