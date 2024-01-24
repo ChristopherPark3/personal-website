@@ -1,5 +1,6 @@
 "use client";
 import InitialAnimation from "./components/heroAnimation/heroAnimation";
+import Hero from "./components/hero/hero";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -8,16 +9,14 @@ export default function Home() {
   useEffect(() => {
     const id = setTimeout(() => {
       setInitialLoad(false);
-    }, 1500);
+    }, 1000);
 
     return () => clearTimeout(id);
   }, []);
 
   return (
     <div className="flex justify-center items-center">
-      <AnimatePresence>
-        {initialLoad && <InitialAnimation initialLoad={initialLoad} />}
-      </AnimatePresence>
+      <Hero />
     </div>
   );
 }

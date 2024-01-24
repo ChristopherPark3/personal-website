@@ -3,22 +3,24 @@ import { AnimatePresence, motion } from "framer-motion";
 import { animateFunc } from "../../_helpers/helpers";
 import { MotionProps } from "@/app/_types/types";
 
-export default function InitialAnimation({
-  initialLoad,
-}: {
-  initialLoad: boolean;
+// MAKE SURE TO WRAP IN <AnimatePresence></AnimatePresence> as well as have load state so exit knows when unmount happens
+
+export default function HeroAnimation({}: {
+  initialLoad?: boolean;
+  children?: JSX.Element;
 }) {
   const topLine: MotionProps = {
-    initial: { y: "50vh", width: 10, height: 10 },
+    initial: { y: "50%", width: 4, height: 4 },
     enter: {
-      width: "100vw",
+      width: "100%",
       transition: {
         duration: 1.5,
         ease: [0.85, 0, 0.15, 1],
       },
     },
     exit: {
-      y: "-5vh",
+      y: "0%",
+      opacity: 0,
       transition: {
         duration: 1.5,
         ease: [0.85, 0, 0.15, 1],
@@ -26,16 +28,18 @@ export default function InitialAnimation({
     },
   };
   const bottomLine: MotionProps = {
-    initial: { y: "50vh", width: 10, height: 10 },
+    initial: { y: "50%", width: 4, height: 4 },
     enter: {
-      width: "100vw",
+      width: "100%",
       transition: {
         duration: 1.5,
         ease: [0.85, 0, 0.15, 1],
       },
     },
     exit: {
-      y: "100vh",
+      y: "100%",
+      opacity: 0,
+
       transition: {
         duration: 1.5,
         ease: [0.85, 0, 0.15, 1],
@@ -43,9 +47,8 @@ export default function InitialAnimation({
     },
   };
 
-
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center h-[100%] w-[100]">
       <motion.div
         key="topLine"
         {...animateFunc(topLine)}
