@@ -1,5 +1,5 @@
 "use client";
-import InitialAnimation from "./components/initialPageLoad/initialAnimation";
+import InitialAnimation from "./components/heroAnimation/heroAnimation";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
