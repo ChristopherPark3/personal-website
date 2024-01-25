@@ -10,10 +10,11 @@ export default function HeroAnimation({}: {
   children?: JSX.Element;
 }) {
   const topLine: MotionProps = {
-    initial: { y: "50%", width: 4, height: 4 },
+    initial: { y: "100%", width: 4, height: 4 },
     enter: {
       width: "100%",
       transition: {
+        delay: 1.3,
         duration: 1.5,
         ease: [0.85, 0, 0.15, 1],
       },
@@ -28,10 +29,11 @@ export default function HeroAnimation({}: {
     },
   };
   const bottomLine: MotionProps = {
-    initial: { y: "50%", width: 4, height: 4 },
+    initial: { y: "100%", width: 4, height: 4 },
     enter: {
       width: "100%",
       transition: {
+        delay: 1.3,
         duration: 1.5,
         ease: [0.85, 0, 0.15, 1],
       },
@@ -48,16 +50,16 @@ export default function HeroAnimation({}: {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-[100%] w-[100]">
+    <div className="flex flex-col justify-end items-center h-[100%] w-[100]">
       <motion.div
         key="topLine"
         {...animateFunc(topLine)}
-        className="bg-slate-50 z-10"
+        className="bg-black z-10"
       ></motion.div>
       <motion.div
         key="bottomLine"
         {...animateFunc(bottomLine)}
-        className="bg-slate-50 z-10"
+        className="bg-black z-10"
       ></motion.div>
     </div>
   );
