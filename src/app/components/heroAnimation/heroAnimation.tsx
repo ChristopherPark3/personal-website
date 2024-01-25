@@ -10,7 +10,7 @@ export default function HeroAnimation({}: {
   children?: JSX.Element;
 }) {
   const topLine: MotionProps = {
-    initial: { y: "100%", width: 4, height: 4 },
+    initial: { y: "100%", width: 0, height: 4 },
     enter: {
       width: "100%",
       transition: {
@@ -29,7 +29,7 @@ export default function HeroAnimation({}: {
     },
   };
   const bottomLine: MotionProps = {
-    initial: { y: "100%", width: 4, height: 4 },
+    initial: { y: "100%", width: 0, height: 4 },
     enter: {
       width: "100%",
       transition: {
@@ -50,7 +50,7 @@ export default function HeroAnimation({}: {
   };
 
   return (
-    <div className="flex flex-col justify-end items-center h-[100%] w-[100]">
+    <div className="flex flex-col justify-end items-center h-[100%] w-[100%]">
       <motion.div
         key="topLine"
         {...animateFunc(topLine)}

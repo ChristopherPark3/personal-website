@@ -34,13 +34,13 @@ export default function Hero() {
       opacity: 1,
       transition: {
         delay: 0.1,
-        ease: [0.32, 0, 0.67, 0]
+        ease: [0.32, 0, 0.67, 0],
       },
     },
     exit: { opacity: 1 },
   };
   return (
-    <div className="fixed top-20 left-20">
+    <div className="">
       <motion.div
         layout
         key="hero-container"
@@ -50,7 +50,7 @@ export default function Hero() {
         <h1 className="text-8xl font-medium">Hi</h1>
         <h1 className="text-8xl font-medium">,&nbsp;</h1>
         <h1 className="text-8xl font-medium">I&apos;m&nbsp;</h1>
-        <h1 className=" text-8xl font-medium w-[30rem] h-[6rem]">
+        <h1 className="text-8xl font-medium w-[30rem] h-[6rem]">
           <AnimatePresence>
             {initialLoad && <HeroAnimation />}
             {!initialLoad && (
@@ -63,6 +63,7 @@ export default function Hero() {
           </AnimatePresence>
         </h1>
       </motion.div>
+      <motion.div className="text-4xl">Software Engineer</motion.div>
     </div>
   );
 }
