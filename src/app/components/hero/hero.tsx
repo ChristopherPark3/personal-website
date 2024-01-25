@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { MotionProps } from "@/app/_types/types";
-import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { animateFunc } from "@/app/_helpers/helpers";
 import HeroAnimation from "../heroAnimation/heroAnimation";
 
