@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-inherit">
       <div className="mx-auto max-w-5xl px-4 py-1 sm:px-6 lg:px-8">
-        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
+        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-400">
           Built with Next.js, TailwindCSS, HyperUI, and AceternityUI.
         </p>
 

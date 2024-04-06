@@ -1,6 +1,6 @@
 "use client";
 import InitialAnimation from "./components/heroAnimation/heroAnimation";
-import Hero from "./components/Hero/hero";
+import Hero from "./components/Hero/Hero";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Spotlight className="ml-[22rem] -mt-[18rem]" />
+      <Hero />
       <Footer />
     </div>
   );
