@@ -4,14 +4,15 @@ import Hero from "./components/Hero/hero";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
-import { Background } from "./components/Background/Background";
+import { AuroraBackground } from "./components/Background/AuroraBackground";
+import { BackgroundGradientAnimation } from "./components/Background/GradientBackground";
+import { Lamp } from "./components/Hero/Lamp";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <Background>
-        <Footer />
-      </Background>
+      <Lamp />
+      <Footer />
     </div>
   );
 }
