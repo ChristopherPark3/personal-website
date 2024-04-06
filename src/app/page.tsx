@@ -7,11 +7,12 @@ import Footer from "./components/Footer/Footer";
 import { AuroraBackground } from "./components/Background/AuroraBackground";
 import { BackgroundGradientAnimation } from "./components/Background/GradientBackground";
 import { Lamp } from "./components/Hero/Lamp";
+import { Spotlight } from "./components/Hero/Spotlight";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <Lamp />
+      <Spotlight className="ml-[22rem] -mt-[18rem]" />
       <Footer />
     </div>
   );
