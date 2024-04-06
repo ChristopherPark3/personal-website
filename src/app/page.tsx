@@ -11,7 +11,7 @@ import { Spotlight } from "./components/Hero/Spotlight";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-1 flex-col">
       <Spotlight className="ml-[22rem] -mt-[18rem]" />
       <Hero />
       <Footer />
