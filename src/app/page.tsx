@@ -5,18 +5,8 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [initialLoad, setInitialLoad] = useState(true);
-  useEffect(() => {
-    const id = setTimeout(() => {
-      setInitialLoad(false);
-    }, 1000);
-
-    return () => clearTimeout(id);
-  }, []);
-
   return (
     <div className="flex flex-col">
-      <Hero />
     </div>
   );
 }
