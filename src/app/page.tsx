@@ -1,12 +1,17 @@
 "use client";
 import InitialAnimation from "./components/heroAnimation/heroAnimation";
-import Hero from "./components/hero/hero";
+import Hero from "./components/Hero/hero";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import Footer from "./components/Footer/Footer";
+import { Background } from "./components/Background/Background";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <Background>
+        <Footer />
+      </Background>
     </div>
   );
 }
