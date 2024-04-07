@@ -1,7 +1,7 @@
 "use client";
 import InitialAnimation from "./components/heroAnimation/heroAnimation";
 import Hero from "./components/Hero/Hero";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, MotionValue, useMotionValueEvent } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import { AuroraBackground } from "./components/Background/AuroraBackground";
@@ -13,18 +13,29 @@ import FloatingNavbar from "./components/Navbar/FloatingNavbar";
 
 export default function Home() {
   const ref = useRef(null);
-  const { scrollYProgress, scrollY } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: ref,
   });
-  const [a, b] = useState<any>(0);
+  // useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+  //   console.log('from home: ', latest)
+  // })
 
   return (
-    <div ref={ref} className="flex flex-1 ">
+    <motion.div ref={ref} className="flex flex-1 flex-col items-center">
       {/* <Spotlight className="-mt-[2rem] xl:ml-[22rem] xl:-mt-[5rem] 2xl:-mt-[13rem] 2xl:ml-[24rem]" /> */}
       <Hero />
-      <Footer className="fixed bottom-0 left-0 w-full" />
+      <h1 className="text-white text-8xl mt-80">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </h1>
+      <Footer />
       <FloatingNavbar />
-    </div>
+    </motion.div>
   );
 }
 

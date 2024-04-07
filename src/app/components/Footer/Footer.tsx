@@ -1,4 +1,4 @@
-export default function Footer({ className }: { className: string }) {
+export default function Footer({ className }: { className?: string }) {
   return (
     <footer className={className}>
       <div className="mx-auto max-w-5xl px-4 py-1 sm:px-6 lg:px-8">

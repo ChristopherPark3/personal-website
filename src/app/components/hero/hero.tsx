@@ -1,22 +1,40 @@
 /* eslint-disable react/no-unescaped-entities */
-import { BackgroundGradient } from "./HeroBackgroundGradient";
+import { Ref, useRef, useState } from "react";
 import { TypewriterEffect } from "./Typewriter";
+import {
+  MotionValue,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 export default function Hero() {
+  const HeroRef = useRef<HTMLDivElement>(null);
+  const opacityRef = useRef(1);
+  const { scrollYProgress }: { scrollYProgress: MotionValue<number> | any } =
+    useScroll({ target: HeroRef, offset: ["start 0.3", "start start"] });
+  const opacityScale = useTransform(scrollYProgress, [0, 1], [1, 0]);
   return (
-    <div className="flex flex-1 flex-col items-center justify-center mt-48">
+    <motion.div
+      ref={HeroRef}
+      layout
+      className="flex flex-1 flex-col items-center justify-center mt-48"
+      style={{ opacity: opacityScale }}
+    >
       <h1 className="flex text-gray-200 text-3xl text-shadow-xs  shadow-slate-50 md:text-4xl md:text-shadow-sm lg-text-8xl xl:text-8xl">
         Hi, I'm Chris
         <TypewriterEffect
           words={[
             {
               text: "topher",
-              className: "text-gray-200 text-3xl text-shadow-xs  shadow-slate-50 md:text-4xl md:text-shadow-sm lg-text-8xl xl:text-8xl",
+              className:
+                "text-gray-200 text-3xl text-shadow-xs  shadow-slate-50 md:text-4xl md:text-shadow-sm lg-text-8xl xl:text-8xl",
             },
           ]}
         />{" "}
         Park
       </h1>
-    </div>
+    </motion.div>
   );
 }
