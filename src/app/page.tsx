@@ -2,19 +2,28 @@
 import InitialAnimation from "./components/heroAnimation/heroAnimation";
 import Hero from "./components/Hero/Hero";
 import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import { AuroraBackground } from "./components/Background/AuroraBackground";
 import { BackgroundGradientAnimation } from "./components/Background/GradientBackground";
 import { Lamp } from "./components/Hero/Lamp";
 import { Spotlight } from "./components/Hero/Spotlight";
+import { useScroll, motion } from "framer-motion";
+import FloatingNavbar from "./components/Navbar/FloatingNavbar";
 
 export default function Home() {
+  const ref = useRef(null);
+  const { scrollYProgress, scrollY } = useScroll({
+    target: ref,
+  });
+  const [a, b] = useState<any>(0);
+
   return (
-    <div className="flex flex-1 flex-col">
-      <Spotlight className="ml-[22rem] -mt-[18rem]" />
+    <div ref={ref} className="flex flex-1 ">
+      {/* <Spotlight className="-mt-[2rem] xl:ml-[22rem] xl:-mt-[5rem] 2xl:-mt-[13rem] 2xl:ml-[24rem]" /> */}
       <Hero />
-      <Footer />
+      <Footer className="fixed bottom-0 left-0 w-full" />
+      <FloatingNavbar />
     </div>
   );
 }
