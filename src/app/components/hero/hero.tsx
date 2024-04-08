@@ -38,8 +38,7 @@ export default function Hero() {
         </h1>
       </div>
       <h1 className="text-gray-500 text-3xl text-center">
-        I am a Software Engineer who loves the process of developing products
-        from 0 to 1
+        Adaptable software engineer capable of wearing many hats
       </h1>
     </motion.div>
   );
