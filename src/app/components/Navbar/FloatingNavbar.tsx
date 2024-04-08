@@ -6,8 +6,12 @@ import { useScroll } from "framer-motion";
 import { useRef } from "react";
 
 export default function FloatingNavbar() {
+  const navbarRef = useRef<HTMLDivElement>(null)
+  const {scrollYProgress} = useScroll({
+    
+  })
   return (
-    <motion.div className="fixed top-24 left-6 md:top-40 md:left-10 z-10 rounded-2xl">
+    <motion.div ref={navbarRef} className="fixed top-24 left-6 md:top-40 md:left-10 z-10 rounded-2xl">
       <BackgroundGradient className="h-32">
         <ul className="flex flex-col bg-zinc-800 h-full justify-around w-full rounded-3xl p-2 ">
           <li id="about_me">
