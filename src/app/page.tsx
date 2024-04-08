@@ -1,7 +1,10 @@
 "use client";
-import InitialAnimation from "./components/heroAnimation/heroAnimation";
 import Hero from "./components/Hero/Hero";
-import { AnimatePresence, MotionValue, useMotionValueEvent } from "framer-motion";
+import {
+  AnimatePresence,
+  MotionValue,
+  useMotionValueEvent,
+} from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import { AuroraBackground } from "./components/Background/AuroraBackground";
