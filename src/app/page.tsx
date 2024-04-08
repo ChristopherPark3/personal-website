@@ -13,6 +13,7 @@ import { Lamp } from "./components/Hero/Lamp";
 import { Spotlight } from "./components/Hero/Spotlight";
 import { useScroll, motion } from "framer-motion";
 import FloatingNavbar from "./components/Navbar/FloatingNavbar";
+import WhoIam from "./components/WhoIAm/WhoIam";
 
 export default function Home() {
   const ref = useRef(null);
@@ -24,9 +25,10 @@ export default function Home() {
   // })
 
   return (
-    <motion.div ref={ref} className="flex flex-1 flex-col items-center">
+    <motion.div ref={ref} className="flex flex-1 flex-col items-center p-4">
       {/* <Spotlight className="-mt-[2rem] xl:ml-[22rem] xl:-mt-[5rem] 2xl:-mt-[13rem] 2xl:ml-[24rem]" /> */}
       <Hero />
+      <WhoIam className="flex items-center gap-4 border-2 border-neutral-800 rounded-lg p-4 mt-44" />
       <h1 className="text-white text-8xl mt-80">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -36,6 +38,7 @@ export default function Home() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </h1>
+
       <Footer />
       <FloatingNavbar />
     </motion.div>
