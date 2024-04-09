@@ -49,18 +49,13 @@ export default function AboutMe({ className }: { className?: string }) {
         />
       </div>
       <div className="">
-        <p className=" text-gray-300 overflow-auto text-xl">
-          During my undergrad at Columbia University, I went from contempltaing
-          work on Wall Street, to pursuing dentistry, none of which I felt
-          passionate about and ultimately chose Psychology. I took a free
-          computer science course (CS50), and was hooked by the inner workings
-          of software, but also how dependent the world and society is upon it.
-          I was skipping my classes to take this online course and uiltimately,
-          I decided to drop everything and pursue this as my career field. One
-          bootcamp later, here I am :)
+        <p className=" text-gray-300 overflow-auto text-lg">
+          During my undergrad at Columbia University, I was very unsure of what I was passionate about until I took a free
+          computer science course (CS50) in my final semester. I was hooked by the inner workings
+          of software and skipped my classes to take this online course. One bootcamp later, here I am deploying scalable and polished products!
         </p>
         <br />
-        <p className=" text-gray-300 overflow-auto text-xl">
+        <p className=" text-gray-300 overflow-auto text-lg">
           Day to day, I am working across the stack building scalable products,
           specifically developing a mobile app to allow users to keep a feed of
           the latest releases from their favorite artists, as well as a recently
@@ -68,8 +63,8 @@ export default function AboutMe({ className }: { className?: string }) {
           different social medias.
         </p>
         <br />
-        <p className=" text-gray-300 overflow-auto text-xl">
-          Some of my passions include sports, cutting hair (my side gig in
+        <p className=" text-gray-300 overflow-auto text-lg">
+          Some of the things I have randomly become passionate about include sports, cutting hair (my side gig in
           college), acryllic painting, and music.
         </p>
         {/* <p className=" text-gray-300 overflow-auto text-xl">
