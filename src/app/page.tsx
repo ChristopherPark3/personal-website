@@ -24,6 +24,7 @@ export default function Home() {
   const homeRef = useRef(null);
   const [arrowInView, setArrowInView] = useState<boolean>(true);
   const [aboutMeInView, setAboutMeInView] = useState<boolean>(false);
+  const [aboutMeY, setAboutMeY] = useState<number>(0);
   const [projectsInView, setProjectsInView] = useState<boolean>(false);
   const [contactMeInView, setContactMeInView] = useState<boolean>(false);
   const { scrollYProgress, scrollY } = useScroll({
@@ -34,6 +35,7 @@ export default function Home() {
 
   scroll((progress) => {
     console.log("progress: ", progress);
+    console.log('scroll: ', window.scrollY);
     if (progress > 0.01) {
       setArrowInView(false);
     }
@@ -80,7 +82,14 @@ export default function Home() {
         )}
       </AnimatePresence>
       <AboutMe className="flex items-center gap-10 border-2 border-neutral-700 bg-neutral-800 rounded-lg p-6 z-10 mt-60 ml-40 mr-40 overflow-visible" />
-
+      <button
+        onClick={() => {
+          window.scrollTo({ top: 555, behavior: "smooth" });
+        }}
+        className="z-10"
+      >
+        Click
+      </button>
       <h1 className="text-white text-8xl mt-80">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -91,7 +100,7 @@ export default function Home() {
         mollit anim id est laborum.
       </h1>
 
-      <Footer className="hover:cursor-default"/>
+      <Footer className="hover:cursor-default" />
     </motion.div>
   );
 }
