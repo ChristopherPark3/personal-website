@@ -20,15 +20,20 @@ export default function Home() {
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  // useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-  //   console.log('from home: ', latest)
-  // })
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log("from home: ", latest);
+  });
 
   return (
-    <motion.div ref={ref} className="flex flex-1 flex-col items-center pl-28 pr-28">
+    <motion.div
+      ref={ref}
+      className="flex flex-1 flex-col items-center pl-28 pr-28"
+    >
       {/* <Spotlight className="-mt-[2rem] xl:ml-[22rem] xl:-mt-[5rem] 2xl:-mt-[13rem] 2xl:ml-[24rem]" /> */}
       <Hero />
-      <AboutMe className="flex items-center gap-4 border-2 border-neutral-800 rounded-lg p-4 mt-44" />
+
+      <AboutMe className="flex items-center gap-4 border-2 border-neutral-800 rounded-lg p-4 z-10 mt-44" />
+
       <h1 className="text-white text-8xl mt-80">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
