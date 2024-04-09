@@ -19,7 +19,7 @@ export default function FloatingNavbar({
   return (
     <motion.div
       ref={navbarRef}
-      className="fixed top-24 left-6 md:top-40 md:left-10 z-10 rounded-2xl"
+      className="fixed top-40 left-6 md:top-40 md:left-10 z-10 rounded-2xl"
       style={{ opacity: navbarOpacity}}
     >
       <BackgroundGradient className="h-32">
@@ -65,7 +65,7 @@ export default function FloatingNavbar({
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="lucide lucide-hard-hat h-4 w-4 stroke-white"
+              className="lucide lucide-hard-hat h-[1.05rem] w-[1.05rem] stroke-white"
             >
               <path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z" />
               <path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5" />
@@ -82,7 +82,7 @@ export default function FloatingNavbar({
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="lucide lucide-notebook-pen h-4 w-4 stroke-white"
+              className="lucide lucide-notebook-pen h-[0.95rem] w-[0.95rem] stroke-white"
             >
               <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
               <path d="M2 6h4" />

@@ -1,8 +1,8 @@
 "use client";
-
+import headshotBackground from "../../../../public/headshot_background.svg";
+import headshotBackgroundOutline from '../../../../public/headshot_background_outline.svg'
 import Image from "next/image";
 import headshot from "../../../../public/Headshot 1.svg";
-import { CardContainer } from "./3DCardContainer";
 import {
   motion,
   useMotionTemplate,
@@ -25,8 +25,30 @@ export default function AboutMe({ className }: { className?: string }) {
       className={className}
       style={{ opacity: opacityScale }}
     >
-      <Image src={headshot} alt="Headshot" width={300} height={300} />;
-      <div>
+      <div className="relative min-h-[300px] min-w-[300px] overflow-visible z-0">
+      <Image
+          src={headshotBackgroundOutline}
+          width={450}
+          height={450}
+          alt="background"
+          className="absolute min-w-[450px] min-h-[450px] z-20"
+        />
+        <Image
+          src={headshotBackground}
+          width={500}
+          height={500}
+          alt="background"
+          className="absolute min-w-[500px] min-h-[500px] z-10"
+        />
+        <Image
+          src={headshot}
+          alt="Headshot"
+          width={300}
+          height={300}
+          className="absolute z-30"
+        />
+      </div>
+      <div className="">
         <p className=" text-gray-300 overflow-auto text-xl">
           During my undergrad at Columbia University, I went from contempltaing
           work on Wall Street, to pursuing dentistry, none of which I felt

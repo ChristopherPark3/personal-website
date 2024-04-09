@@ -46,7 +46,7 @@ export default function Home() {
       {/* <Spotlight className="-mt-[2rem] xl:ml-[22rem] xl:-mt-[5rem] 2xl:-mt-[13rem] 2xl:ml-[24rem]" /> */}
       <Hero />
 
-      <AboutMe className="flex items-center gap-4 border-2 border-neutral-800 rounded-lg p-6 z-10 mt-60" />
+      <AboutMe className="flex items-center gap-10 border-2 border-neutral-800 rounded-lg p-6 z-10 mt-60 overflow-visible" />
 
       <h1 className="text-white text-8xl mt-80">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
