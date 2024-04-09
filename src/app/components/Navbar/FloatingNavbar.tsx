@@ -1,27 +1,29 @@
 "use client";
 
-import { MotionValue, motion } from "framer-motion";
+import { MotionValue, motion, useMotionValue } from "framer-motion";
 import { BackgroundGradient } from "./BackgroundGradient";
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
 
 export default function FloatingNavbar({
   navbarOpacity,
-  navbarScale,
+  aboutMeInView
 }: {
   navbarOpacity: MotionValue<number>;
-  navbarScale: MotionValue<number>;
+  aboutMeInView: boolean,
+  projectsInView?: boolean,
+  contactMeInView?: boolean
 }) {
   const navbarRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({});
+
   return (
     <motion.div
       ref={navbarRef}
       className="fixed top-24 left-6 md:top-40 md:left-10 z-10 rounded-2xl"
-      style={{ opacity: navbarOpacity, scale: navbarScale }}
+      style={{ opacity: navbarOpacity}}
     >
       <BackgroundGradient className="h-32">
-        <ul className="flex flex-col bg-zinc-800 h-full justify-around w-full rounded-3xl p-2 ">
+        <motion.ul className="flex flex-col bg-zinc-800 h-full justify-around w-full rounded-3xl p-2 ">
           <li id="about_me">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +41,21 @@ export default function FloatingNavbar({
               <line x1="15" x2="15.01" y1="9" y2="9" />
             </svg>
           </li>
+          {aboutMeInView  ? (
+            <div className="text-gray-200 text-xs fixed top-[11.3rem] left-[5rem]">
+              About me
+            </div>
+          ) : null}
+          {aboutMeInView  ? (
+            <div className="text-gray-200 text-xs fixed top-[13.65rem] left-[5rem]">
+              Projects
+            </div>
+          ) : null}
+          {aboutMeInView  ? (
+            <div className="text-gray-200 text-xs fixed top-[15.95rem] left-[5rem]">
+              Contact me
+            </div>
+          ) : null}
           <li id="projects">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +92,7 @@ export default function FloatingNavbar({
               <path d="M18.4 2.6a2.17 2.17 0 0 1 3 3L16 11l-4 1 1-4Z" />
             </svg>
           </li>
-        </ul>
+        </motion.ul>
       </BackgroundGradient>
     </motion.div>
   );

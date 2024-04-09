@@ -10,7 +10,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { useRef } from "react";
+import { Ref, useRef } from "react";
 export default function AboutMe({ className }: { className?: string }) {
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -18,9 +18,6 @@ export default function AboutMe({ className }: { className?: string }) {
     offset: ["0 0.5", "0.5 0.5"],
   });
   const opacityScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  useMotionValueEvent(scrollYProgress, "change", (target) => {
-    console.log("from about", target);
-  });
 
   return (
     <motion.div
@@ -48,17 +45,18 @@ export default function AboutMe({ className }: { className?: string }) {
           deployed web app, serving as a way for creators to display their
           different social medias.
         </p>
+        <br />
+        <p className=" text-gray-300 overflow-auto text-xl">
+          Some of my passions include sports, cutting hair (my side gig in
+          college), acryllic painting, and music.
+        </p>
         {/* <p className=" text-gray-300 overflow-auto text-xl">
           I love sports, my passion stemming from my time playing football for 9
           years including university. I met amazing people there and created
           life long bonds that I cherish. So anything sports related you can bet
           I am tuned in.
         </p>
-        <br />
-        <p className=" text-gray-300 overflow-auto text-xl">
-          Some other passions include cutting hair (my side gig in college),
-          acryllic painting, and music.
-        </p> */}
+        */}
       </div>
     </motion.div>
   );
