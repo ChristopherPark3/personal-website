@@ -3,7 +3,31 @@ export default function Footer({ className }: { className?: string }) {
     <footer className={className}>
       <div className="mx-auto max-w-5xl px-4 py-1 sm:px-6 lg:px-8">
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-400">
-          Made with Next.js, TailwindCSS, Framer Motion, HyperUI, and AceternityUI.
+          Made with amazing tools/libraries like{" "}
+          <a className="hover:text-gray-300" href="https://nextjs.org/">
+            Next.js
+          </a>
+          ,{" "}
+          <a className="hover:text-gray-300" href="https://tailwindcss.com/">
+            TailwindCSS
+          </a>
+          ,{" "}
+          <a className="hover:text-gray-300" href="https://www.framer.com/">
+            Framer Motion
+          </a>
+          , {" "}
+          <a className="hover:text-gray-300" href="https://www.hyperui.dev/">
+            HyperUI
+          </a>
+          ,{" "}
+          <a className="hover:text-gray-300" href="https://ui.aceternity.com/">
+            AceternityUI
+          </a>{" "}
+          and{" "}
+          <a className="hover:text-gray-300" href="https://fffuel.co/">
+            fffuel
+          </a>
+          .
         </p>
 
         <ul className="mt-12 flex justify-center gap-6 md:gap-8">
@@ -12,7 +36,7 @@ export default function Footer({ className }: { className?: string }) {
               href="https://www.linkedin.com/in/christopherjcpark"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-neutral-700 transition hover:text-neutral-700/75"
             >
               <span className="sr-only">LinkedIn</span>
               <svg
@@ -35,7 +59,7 @@ export default function Footer({ className }: { className?: string }) {
               href="https://www.instagram.com/ceepeetres/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-neutral-700 transition hover:text-neutral-700/75"
             >
               <span className="sr-only">Instagram</span>
               <svg
@@ -58,7 +82,7 @@ export default function Footer({ className }: { className?: string }) {
               href="https://www.github.com/ChristopherPark3"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-neutral-700 transition hover:text-neutral-700/75"
             >
               <span className="sr-only">GitHub</span>
               <svg

@@ -7,12 +7,14 @@ import { useRef } from "react";
 
 export default function FloatingNavbar({
   navbarOpacity,
-  aboutMeInView
+  aboutMeInView,
+  projectsInView,
+  contactMeInView,
 }: {
   navbarOpacity: MotionValue<number>;
-  aboutMeInView: boolean,
-  projectsInView?: boolean,
-  contactMeInView?: boolean
+  aboutMeInView: boolean;
+  projectsInView?: boolean;
+  contactMeInView?: boolean;
 }) {
   const navbarRef = useRef<HTMLDivElement>(null);
 
@@ -20,7 +22,7 @@ export default function FloatingNavbar({
     <motion.div
       ref={navbarRef}
       className="fixed top-40 left-6 md:top-40 md:left-10 z-10 rounded-2xl"
-      style={{ opacity: navbarOpacity}}
+      style={{ opacity: navbarOpacity }}
     >
       <BackgroundGradient className="h-32">
         <motion.ul className="flex flex-col bg-zinc-800 h-full justify-around w-full rounded-3xl p-2 ">
@@ -41,17 +43,22 @@ export default function FloatingNavbar({
               <line x1="15" x2="15.01" y1="9" y2="9" />
             </svg>
           </li>
-          {aboutMeInView  ? (
-            <div className="text-gray-200 text-xs fixed top-[11.3rem] left-[5rem]">
+          {aboutMeInView ? (
+            <motion.div
+              className="text-gray-200 text-xs fixed top-[11.3rem] left-[5rem]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: "easeInOut" }}
+            >
               About me
-            </div>
+            </motion.div>
           ) : null}
-          {aboutMeInView  ? (
+          {projectsInView ? (
             <div className="text-gray-200 text-xs fixed top-[13.65rem] left-[5rem]">
               Projects
             </div>
           ) : null}
-          {aboutMeInView  ? (
+          {contactMeInView ? (
             <div className="text-gray-200 text-xs fixed top-[15.95rem] left-[5rem]">
               Contact me
             </div>

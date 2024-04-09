@@ -52,11 +52,11 @@ export default function AboutMe({ className }: { className?: string }) {
         <p className=" text-gray-300 overflow-auto text-lg">
           During my undergrad at Columbia University, I was very unsure of what I was passionate about until I took a free
           computer science course (CS50) in my final semester. I was hooked by the inner workings
-          of software and skipped my classes to take this online course. One bootcamp later, here I am deploying scalable and polished products!
+          of software and skipped my classes to take this online course. One bootcamp later, here I am deploying maintainable and polished products!
         </p>
         <br />
         <p className=" text-gray-300 overflow-auto text-lg">
-          Day to day, I am working across the stack building scalable products,
+          Day to day, I am working across the stack building scalable apps,
           specifically developing a mobile app to allow users to keep a feed of
           the latest releases from their favorite artists, as well as a recently
           deployed web app, serving as a way for creators to display their
