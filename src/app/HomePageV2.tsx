@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import HeroArrow from "./components/Hero/HeroArrow";
-import Hero from "./components/Hero/Hero";
-import Footer from "./components/Footer/Footer";
+import HeroArrow from "./components/V1/Hero/HeroArrow";
+import Hero from "./components/V1/Hero/Hero";
+import Footer from "./components/V1/Footer/Footer";
 
 export default function HomePageV2() {
   const [arrowInView, setArrowInView] = useState<boolean>(false);

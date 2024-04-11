@@ -1,5 +1,5 @@
 "use client";
-import Hero from "./components/Hero/Hero";
+import Hero from "./Hero/Hero";
 import ArrowDown from "../../public/ArrowDown.svg";
 import {
   AnimatePresence,
@@ -10,14 +10,14 @@ import {
   useTransform,
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Footer from "./components/Footer/Footer";
-import { AuroraBackground } from "./components/Background/AuroraBackground";
-import { BackgroundGradientAnimation } from "./components/Background/GradientBackground";
-import { Lamp } from "./components/Hero/Lamp";
-import { Spotlight } from "./components/Hero/Spotlight";
+import Footer from "./Footer/Footer";
+import { AuroraBackground } from "./Background/AuroraBackground";
+import { BackgroundGradient } from "./Navbar/BackgroundGradient";
+import { Lamp } from "./Hero/Lamp";
+import { Spotlight } from "./Hero/Spotlight";
 import { useScroll, motion } from "framer-motion";
-import FloatingNavbar from "./components/Navbar/FloatingNavbar";
-import AboutMe from "./components/AboutMe/AboutMe";
+import FloatingNavbar from "./Navbar/FloatingNavbar";
+import AboutMe from "./AboutMe/AboutMe";
 import Image from "next/image";
 
 export default function HomePageV1() {

@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "../../../../utils/cn";
+import { cn } from "../../../../../utils/cn";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
@@ -36,7 +36,6 @@ export const TypewriterEffect = ({
           width: "fit-content",
         },
         {
-          
           duration: 0.3,
           delay: stagger(0.175),
           ease: "easeInOut",
