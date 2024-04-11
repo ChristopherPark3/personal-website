@@ -1,6 +1,6 @@
 "use client";
 import headshotBackground from "../../../../public/headshot_background.svg";
-import headshotBackgroundOutline from '../../../../public/headshot_background_outline.svg'
+import headshotBackgroundOutline from "../../../../public/headshot_background_outline.svg";
 import Image from "next/image";
 import headshot from "../../../../public/Headshot 1.svg";
 import {
@@ -18,7 +18,7 @@ export default function AboutMe({ className }: { className?: string }) {
     offset: ["0 0.5", "0.5 0.5"],
   });
   const opacityScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
+  
   return (
     <motion.div
       ref={aboutMeRef}
@@ -26,7 +26,7 @@ export default function AboutMe({ className }: { className?: string }) {
       style={{ opacity: opacityScale }}
     >
       <div className="relative min-h-[300px] min-w-[300px] overflow-visible z-0">
-      <Image
+        <Image
           src={headshotBackgroundOutline}
           width={450}
           height={450}
@@ -45,14 +45,17 @@ export default function AboutMe({ className }: { className?: string }) {
           alt="Headshot"
           width={300}
           height={300}
-          className="absolute z-30"
+          className="absolute z-30 "
         />
       </div>
       <div className="">
         <p className=" text-gray-300 overflow-auto text-lg">
-          During my undergrad at Columbia University, I was very unsure of what I was passionate about until I took a free
-          computer science course (CS50) in my final semester. I was hooked by the inner workings
-          of software and skipped my classes to take this online course. One bootcamp later, here I am deploying maintainable and polished products!
+          During my undergrad at Columbia University, I was very unsure of what
+          I was passionate about until I took a free computer science course
+          (CS50) in my final semester. I was hooked by the inner workings of
+          software and skipped my classes to take this online course. One
+          bootcamp later, here I am deploying maintainable and polished
+          products!
         </p>
         <br />
         <p className=" text-gray-300 overflow-auto text-lg">
@@ -64,8 +67,9 @@ export default function AboutMe({ className }: { className?: string }) {
         </p>
         <br />
         <p className=" text-gray-300 overflow-auto text-lg">
-          Some of the things I have randomly become passionate about include sports, cutting hair (my side gig in
-          college), acryllic painting, and music.
+          Some of the things I have randomly become passionate about include
+          sports, cutting hair (my side gig in college), acryllic painting, and
+          music.
         </p>
         {/* <p className=" text-gray-300 overflow-auto text-xl">
           I love sports, my passion stemming from my time playing football for 9

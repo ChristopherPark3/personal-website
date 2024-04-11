@@ -13,8 +13,8 @@ export default function FloatingNavbar({
 }: {
   navbarOpacity: MotionValue<number>;
   aboutMeInView: boolean;
-  projectsInView?: boolean;
-  contactMeInView?: boolean;
+  projectsInView: boolean;
+  contactMeInView: boolean;
 }) {
   const navbarRef = useRef<HTMLDivElement>(null);
 
