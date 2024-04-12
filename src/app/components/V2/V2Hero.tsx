@@ -9,7 +9,7 @@ import {
   useTransform,
 } from "framer-motion";
 
-export default function Hero() {
+export default function V2Hero() {
   const HeroRef = useRef<HTMLDivElement>(null);
   const opacityRef = useRef(1);
   const { scrollYProgress }: { scrollYProgress: MotionValue<number> | any } =

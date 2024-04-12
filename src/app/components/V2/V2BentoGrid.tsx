@@ -20,12 +20,12 @@ export default function V2BentoGrid({ className }: { className: string }) {
 }
 
 const items = [
-  { title: "test1", description: "test 1", header: "test 1", className: "bg-green-100" },
-  { title: "test1", description: "test 1", header: "test 1", className: "bg-green-100" },
-  { title: "test1", description: "test 1", header: "test 1", className: "bg-green-100" },
-  { title: "test1", description: "test 1", header: "test 1", className: "bg-green-100" },
-  { title: "test1", description: "test 1", header: "test 1", className: "bg-green-100" },
-  { title: "test1", description: "test 1", header: "test 1", className: "bg-green-100" },
+  { title: "test1", description: "description here", header: "header", className: "bg-green-100 h-28" },
+  { title: "test2", description: "test 1", header: "test 1", className: "bg-green-100 h-28" },
+  { title: "test3", description: "test 1", header: "test 1", className: "bg-green-100 h-28" },
+  { title: "test4", description: "test 1", header: "test 1", className: "bg-green-100 h-28" },
+  { title: "test5", description: "test 1", header: "test 1", className: "bg-green-100 h-28" },
+  { title: "test6", description: "test 1", header: "test 1", className: "bg-green-100 h-28" },
 ];
 
 // key={i}
