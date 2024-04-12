@@ -16,7 +16,7 @@ export default function V2HeroArrow({
       <button
         onClick={() => {
           setArrowInView(false);
-          window.scrollTo({ top: 600, behavior: "smooth" });
+          window.scrollTo({ top: 590, behavior: "smooth" });
         }}
       >
         <svg
