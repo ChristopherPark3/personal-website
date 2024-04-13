@@ -1,13 +1,14 @@
 "use client";
 
 import { BentoGrid, BentoGridItem } from "./Bento/BentoGrid";
-import headshot1 from "../../../../public/Headshot1.svg";
-import creatorcards from "../../../../public/creatorcards.svg";
-import Visivue from "../../../../public/Visivue.svg";
+import headshot1 from "../../../public/Headshot1.svg";
+import creatorcards from "../../../public/creatorcards.svg";
+import Visivue from "../../../public/Visivue.svg";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
 import Badge from "./Projects/V2Badge";
+import ContactMe from "./ContactMe";
 
 export default function V2BentoGrid({ className }: { className: string }) {
   return (
@@ -119,11 +120,11 @@ const items = [
   },
   {
     section: "Contact",
-    title: "Contact Me",
-    description: "Feel free to reach out!",
-    header: '',
-    className: "bg-green-100 h-full col-span-6",
-  }
+    title: <ContactMe />,
+    header: "Feel free to reach out!",
+
+    className: " h-full col-span-6 text-white",
+  },
 ];
 
 // key={i}

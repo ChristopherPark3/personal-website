@@ -26,7 +26,6 @@ export default function V2Hero() {
         <h1 className="flex text-gray-200 text-3xl text-shadow-xs  shadow-slate-50 md:text-4xl md:text-shadow-sm lg-text-8xl xl:text-8xl">
           Hi, I'm Chris
           <TypewriterEffect
-
             words={[
               {
                 text: "topher",
