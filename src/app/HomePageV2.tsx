@@ -25,7 +25,7 @@ export default function HomePageV2() {
     }, 2000);
   }, []);
   return (
-    <motion.div className="flex flex-1 flex-col items-center px-20">
+    <motion.div className="flex flex-1 flex-col items-center px-36">
       <ResumeButton />
       <FloatingNav navItems={navItems} />
       <V2Hero />
