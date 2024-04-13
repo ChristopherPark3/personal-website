@@ -8,6 +8,7 @@ import V2Footer from "./components/V2/V2Footer";
 import V2BentoGrid from "./components/V2/V2BentoGrid";
 import V2Navbar from "./components/V2/V2Navbar";
 import { FloatingNav } from "./components/V2/Navbar/AceternityNavbar";
+import ResumeButton from "./components/V2/ResumeButton";
 
 const navItems = [{ name: "About" }, { name: "Projects" }, { name: "Contact" }];
 
@@ -24,14 +25,14 @@ export default function HomePageV2() {
     }, 2000);
   }, []);
   return (
-    <motion.div className="flex flex-1 flex-col items-center">
-
+    <motion.div className="flex flex-1 flex-col items-center px-20">
+      <ResumeButton />
       <FloatingNav navItems={navItems} />
       <V2Hero />
       <AnimatePresence>
         {arrowInView && <V2HeroArrow setArrowInView={setArrowInView} />}
       </AnimatePresence>
-      <V2BentoGrid className="border-2 border-neutral-800 p-4 rounded-2xl mt-[20rem]" />
+      <V2BentoGrid className="border-2 border-neutral-800 p-4 rounded-2xl mt-[20rem] min-w-full " />
       s
       <h1 className="text-white text-8xl mt-80">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

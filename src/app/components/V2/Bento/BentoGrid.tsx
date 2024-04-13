@@ -9,7 +9,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-6 md:grid-rows-4 gap-4 max-w-7xl mx-auto ",
         className
       )}
     >
@@ -24,12 +24,14 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  section
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
+  section?: string;
 }) => {
   return (
     <div
@@ -51,5 +53,3 @@ export const BentoGridItem = ({
     </div>
   );
 };
-
-
