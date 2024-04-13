@@ -3,6 +3,7 @@
 import { BentoGrid, BentoGridItem } from "./Bento/BentoGrid";
 import headshot1 from "../../../../public/Headshot1.svg";
 import creatorcards from "../../../../public/creatorcards.svg";
+import Visivue from "../../../../public/Visivue.svg";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
@@ -82,10 +83,25 @@ const items = [
   },
   {
     section: "Projects",
-    title: "test5",
-    description: "test 1",
-    header: "test 1",
-    className: "bg-green-100 h-full",
+    title: "A dev tool for tracking state in Vue3",
+    description: (
+      <div className="flex gap-1">
+        <Badge name="Vue3" />
+        <Badge name="VueFlow" />
+        <Badge name="VSCode API" />
+        <Badge name="Webview API" />
+      </div>
+    ),
+    header: (
+      <Image
+        src={Visivue}
+        width={undefined}
+        height={undefined}
+        alt="Visivue screen shot"
+        className="w-full h-full rounded-lg bg-red-900"
+      />
+    ),
+    className: "h-full col-span-2",
   },
   {
     section: "About",
