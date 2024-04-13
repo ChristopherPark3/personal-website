@@ -60,7 +60,7 @@ const items = [
   },
   {
     section: "Projects",
-    title: "Enhance your social media presence with Creator Cards",
+    title: "Enhance your social media presence with creatorcards",
     description: (
       <div className="flex gap-1">
         <Badge name="Next.js" />
@@ -104,12 +104,26 @@ const items = [
     className: "h-full col-span-2",
   },
   {
-    section: "About",
-    title: "test6",
-    description: "test 1",
+    section: "Projects",
+    title: "Keep a feed of newest releases from your favorite artists",
+    description: (
+      <div className="flex gap-1">
+        <Badge name="React Native" />
+        <Badge name="Expo" />
+        <Badge name="Zustand" />
+        <Badge name="React Query" />
+      </div>
+    ),
     header: "test 1",
-    className: "bg-green-100 h-full",
+    className: "bg-green-100 h-full col-span-2",
   },
+  {
+    section: "Contact",
+    title: "Contact Me",
+    description: "Feel free to reach out!",
+    header: '',
+    className: "bg-green-100 h-full col-span-6",
+  }
 ];
 
 // key={i}
