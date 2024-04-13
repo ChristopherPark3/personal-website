@@ -99,7 +99,7 @@ const items = [
         width={undefined}
         height={undefined}
         alt="Visivue screen shot"
-        className="w-full h-full rounded-lg bg-red-900"
+        className="w-full h-full rounded-lg"
       />
     ),
     className: "h-full col-span-2",
@@ -120,10 +120,9 @@ const items = [
   },
   {
     section: "Contact",
-    title: <ContactMe />,
-    header: "Feel free to reach out!",
+    header: <ContactMe />,
 
-    className: " h-full col-span-6 text-white",
+    className: " h-full col-span-5 text-white",
   },
 ];
 

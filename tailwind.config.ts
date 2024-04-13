@@ -103,6 +103,7 @@ module.exports = {
         { values: theme("textShadow") }
       );
     }),
+    "@tailwindcss/forms",
   ],
 };
 
