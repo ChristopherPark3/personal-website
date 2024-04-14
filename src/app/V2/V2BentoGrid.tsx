@@ -3,6 +3,7 @@
 import { BentoGrid, BentoGridItem } from "./Bento/BentoGrid";
 import headshot1 from "../../../public/Headshot1.svg";
 import creatorcards from "../../../public/creatorcards.svg";
+import creatorcards2 from '../../../public/creatorcards_screenshot.png'
 import Visivue from "../../../public/Visivue.svg";
 import { motion } from "framer-motion";
 
@@ -71,7 +72,7 @@ const items = [
         width={48}
         height={48}
         alt="Headshot"
-        className="h-52 w-52"
+        className="h-52 w-52 aspect-square"
       />
     ),
     // description: "Software Engineer",
@@ -103,10 +104,9 @@ const items = [
     header: (
       <Image
         src={creatorcards}
-        width={undefined}
-        height={undefined}
+ 
         alt="creator cards screen shot"
-        className="w-full h-full rounded-lg"
+        className="w-full h-full rounded-lg aspect-video"
       />
     ),
     className: "bg-neutral-800 h-full col-span-3",
