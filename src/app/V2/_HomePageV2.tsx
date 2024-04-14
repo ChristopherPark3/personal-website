@@ -17,7 +17,9 @@ export default function HomePageV2() {
   const [prevFilter, setPrevFilter] = useState<string>("All");
   const [filter, setFilter] = useState<string>("All");
   const [arrowInView, setArrowInView] = useState<boolean>(false);
-  const [bentoView, setBentoView] = useState<boolean>(window.innerWidth >= 1336);
+  const [bentoView, setBentoView] = useState<boolean>(
+    window.innerWidth >= 1336
+  );
   scroll((progress) => {
     if (progress > 0) {
       setArrowInView(false);
@@ -44,7 +46,7 @@ export default function HomePageV2() {
       {bentoView ? (
         <motion.div className="flex flex-1 flex-col items-center lg:px-20 2xl:px-36">
           <Socials />
-          <ResumeButton />
+
           <FloatingNav
             navItems={navItems}
             setFilter={setFilter}
@@ -62,7 +64,7 @@ export default function HomePageV2() {
           <V2Footer className="hover:cursor-default mb-4" />
         </motion.div>
       ) : (
-        <div>Small screen</div>
+        <div className="flex flex-1 w-full h-full">Small screen</div>
       )}
     </>
   );
