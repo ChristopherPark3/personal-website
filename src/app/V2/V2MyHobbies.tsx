@@ -8,7 +8,7 @@ export default function V2MyHobbies() {
         <li>✂️ Cutting hair (my side hustle in college)</li>
         <li>🧑🏻‍🎨 Acryllic painting on canvas</li>
         <li>🏈 Watching football</li>
-        <li>💨 Running (yeah right 🤢)</li>
+        <li>💨 Running (not really 🤢)</li>
       </ul>
     </div>
   );

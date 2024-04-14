@@ -16,7 +16,11 @@ export default function V2HeroArrow({
       <button
         onClick={() => {
           setArrowInView(false);
-          window.scrollTo({ top: 590, behavior: "smooth" });
+          if (window.innerHeight > 800) {
+            window.scrollTo({ top: 800, behavior: "smooth" });
+          } else {
+            window.scrollTo({ top: 680, behavior: "smooth" });
+          }
         }}
       >
         <svg
