@@ -31,7 +31,6 @@ export default function V2BentoGrid({ className }: { className: string }) {
 const items = [
   {
     section: "Projects",
-
     header: (
       <Image
         src={headshot1}
@@ -47,17 +46,14 @@ const items = [
   },
   {
     section: "About",
-    title: "about",
-    description: "test 1",
-    header: "test 1",
-    className: "bg-green-100 min-h-[100%] col-span-1 row-span-1",
+    header:
+      "I am a full stack engineer who loves the process of building products that solve problems from the ground up.",
+    className: " min-h-[100%] col-span-2 row-span-1",
   },
   {
     section: "About",
-    title: "test3 ",
-    description: <Badge name="Next.js" />,
     header: "test 1",
-    className: "bg-green-100 h-full",
+    className: " h-full col-span-3",
   },
   {
     section: "Projects",
@@ -84,7 +80,7 @@ const items = [
   },
   {
     section: "Projects",
-    title: "A dev tool for tracking state in Vue3",
+    title: "An opensource dev tool for tracking state in Vue3",
     description: (
       <div className="flex gap-1">
         <Badge name="Vue3" />
@@ -102,7 +98,7 @@ const items = [
         className="w-full h-full rounded-lg"
       />
     ),
-    className: "h-full col-span-2",
+    className: "h-full col-span-3",
   },
   {
     section: "Projects",
