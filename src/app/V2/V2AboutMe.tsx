@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 export default function V2AboutMe() {
   return (
-    <div className="flex flex-col gap-3 text-sm xl:gap-3 2xl:text-md text-gray-200">
+    <div className="flex flex-col gap-3 text-sm xl:gap-3 xl:text-md 2xl:text-lg text-gray-200">
       <p className="">
         I'm a software engineer with a knack for solving problems with software.
         I have experience working with Next.js, TypeScript, Node.js, and more.
