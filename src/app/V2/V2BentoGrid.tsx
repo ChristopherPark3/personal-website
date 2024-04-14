@@ -175,7 +175,17 @@ const items = [
   },
   {
     section: "Contact",
-    header: <ContactMe />,
+    header: (
+      <div className="flex flex-col gap-4 text-xl">
+        Feel free to reach out to me: 
+        <a
+          className="font-semibold text-xl hover:scale-105 text-[#0077b6] "
+          href="mailto:admin@creatorcards.us"
+        >
+          christopherjcpark00@gmail.com
+        </a>
+      </div>
+    ),
 
     className: " h-full col-span-3 text-white",
   },

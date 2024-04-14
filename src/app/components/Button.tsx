@@ -3,10 +3,12 @@ import { cn } from "../../../utils/cn";
 export default function Button({
   children,
   className,
+  disabled,
   ...props
 }: {
   children?: React.ReactNode;
   className?: string;
+  disabled?: boolean;
 }) {
   return (
     <button
@@ -15,6 +17,7 @@ export default function Button({
         className
       )}
       {...props}
+      disabled={disabled}
     >
       {children}
     </button>
