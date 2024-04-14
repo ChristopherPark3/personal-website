@@ -134,7 +134,7 @@ const items = [
         <Badge name="VSCode API" />
         <Badge name="Webview API" />
         <a
-          className="text-sm flex items-center gap-2 text-white ml-4 rounded-full hover:translate-x-1 transition ease-in-out"
+          className="text-sm flex items-center gap-2 text-white ml-4 rounded-full hover:translate-x-1 transition ease-linear"
           href="https://www.visivue.org"
           target="_blank"
           rel="noopener noreferrer"

@@ -14,7 +14,7 @@ export default function ContactMe() {
   return (
     <div className="flex flex-col font-medium  gap-2 ">
       <h1 className="text-xl text-gray-200 flex ">
-        Contact me
+        Get in touch
       </h1>
       <div className="grid grid-cols-2">
         <div className="flex flex-col py-8 pr-8 gap-2">
