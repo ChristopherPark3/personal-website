@@ -10,6 +10,7 @@ import Image from "next/image";
 import Badge from "./Projects/V2Badge";
 import ContactMe from "./ContactMe";
 import { Skeleton } from "../components/Skeleton";
+import MyHobbies from "./MyHobbies";
 
 export default function V2BentoGrid({ className }: { className: string }) {
   return (
@@ -49,12 +50,12 @@ const items = [
     section: "About",
     header:
       "I am a full stack engineer who loves the process of building products that solve problems from the ground up.",
-    className: " min-h-[100%] col-span-2 row-span-1",
+    className: " min-h-[100%] col-span-3 row-span-1",
   },
   {
     section: "About",
-    header: "test 1",
-    className: " h-full col-span-3",
+    header: <MyHobbies />,
+    className: " h-full col-span-2",
   },
   {
     section: "Projects",
@@ -119,7 +120,7 @@ const items = [
     section: "Contact",
     header: <ContactMe />,
 
-    className: " h-full col-span-5 text-white",
+    className: " h-full col-span-4 text-white",
   },
 ];
 
