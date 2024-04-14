@@ -11,11 +11,13 @@ import { cn } from "../../../../utils/cn";
 export const FloatingNav = ({
   navItems,
   className,
+  setFilter,
 }: {
   navItems: {
     name: string;
     icon?: JSX.Element;
   }[];
+  setFilter: (filter: string) => void;
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
@@ -54,7 +56,12 @@ export const FloatingNav = ({
           className
         )}
       >
-        <button className="text-sm font-medium relative pl-4  py-2 rounded-full hover:cursor-pointer hover:text-white text-gray-300">
+        <button
+          className="text-sm font-medium relative pl-4  py-2 rounded-full hover:cursor-pointer hover:text-white text-gray-300"
+          onClick={() => setFilter("All")}
+          onMouseOver={() => console.log("All")}
+          onMouseLeave={() => console.log("Left All")}
+        >
           All
         </button>
         {navItems.map((navItem: any, idx: number) => (
@@ -63,6 +70,9 @@ export const FloatingNav = ({
               "relative dark:text-neutral-50 items-center flex space-x-1 text-gray-300  hover:text-white text-sm hover:cursor-pointer"
             )}
             key={idx}
+            onClick={() => setFilter(navItem.name)}
+            onMouseOver={() => console.log(navItem.name)}
+            onMouseLeave={() => console.log(`Left ${navItem.name}`)}
           >
             {navItem.name}
           </h1>

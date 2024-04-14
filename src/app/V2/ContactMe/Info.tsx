@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import info from "../../../../public/info.svg";
 import Image from "next/image";
 import {
@@ -22,7 +23,7 @@ export default function Info() {
             />
           </TooltipTrigger>
           <TooltipContent className="bg-neutral-800 border-2 border-gray-200">
-            <p >Just asking so I know who is who :{')'}</p>
+            <p >Please don't spam me :{')'}</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>

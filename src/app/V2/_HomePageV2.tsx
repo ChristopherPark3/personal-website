@@ -14,6 +14,7 @@ import Socials from "./Socials";
 const navItems = [{ name: "About" }, { name: "Projects" }, { name: "Contact" }];
 
 export default function HomePageV2() {
+  const [filter, setFilter] = useState<string>("All");
   const [arrowInView, setArrowInView] = useState<boolean>(false);
   scroll((progress) => {
     if (progress > 0) {
@@ -25,11 +26,12 @@ export default function HomePageV2() {
       setArrowInView(true);
     }, 2000);
   }, []);
+  console.log(filter)
   return (
     <motion.div className="flex flex-1 flex-col items-center lg:px-20 2xl:px-36">
       <Socials />
       <ResumeButton />
-      <FloatingNav navItems={navItems} />
+      <FloatingNav navItems={navItems} setFilter={setFilter}/>
       <V2Hero />
       <AnimatePresence>
         {arrowInView && <V2HeroArrow setArrowInView={setArrowInView} />}
