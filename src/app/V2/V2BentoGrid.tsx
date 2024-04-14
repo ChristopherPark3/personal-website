@@ -3,7 +3,8 @@
 import { BentoGrid, BentoGridItem } from "./Bento/BentoGrid";
 import headshot1 from "../../../public/Headshot1.svg";
 import creatorcards from "../../../public/creatorcards.svg";
-import creatorcards2 from '../../../public/creatorcards_screenshot.png'
+import creatorcards2 from "../../../public/creatorcards_screenshot.png";
+import ArrowRight from "../../../public/ArrowRight.svg";
 import Visivue from "../../../public/Visivue.svg";
 import { motion } from "framer-motion";
 
@@ -93,18 +94,30 @@ const items = [
     section: "Projects",
     title: "Enhance your social media presence with creatorcards",
     description: (
-      <div className="flex gap-1 flex-wrap">
+      <div className="flex gap-1 flex-wrap items-center">
         <Badge name="Next.js" />
         <Badge name="Supabase" />
         <Badge name="Prisma" />
         <Badge name="React Query" />
         <Badge name="TailwindCSS" />
+        <a
+          className="text-sm flex items-center gap-2 text-white ml-4 rounded-full hover:translate-x-1 transition ease-in-out"
+          href="https://www.creatorcards.us"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit{" "}
+          <Image
+            src={ArrowRight}
+            alt="Christopher Park Arrow Right"
+            className=""
+          />
+        </a>
       </div>
     ),
     header: (
       <Image
         src={creatorcards}
- 
         alt="creator cards screen shot"
         className="w-full h-full rounded-lg aspect-video"
       />
@@ -120,6 +133,19 @@ const items = [
         <Badge name="VueFlow" />
         <Badge name="VSCode API" />
         <Badge name="Webview API" />
+        <a
+          className="text-sm flex items-center gap-2 text-white ml-4 rounded-full hover:translate-x-1 transition ease-in-out"
+          href="https://www.visivue.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit{" "}
+          <Image
+            src={ArrowRight}
+            alt="Christopher Park Arrow Right"
+            className=""
+          />
+        </a>
       </div>
     ),
     header: (
