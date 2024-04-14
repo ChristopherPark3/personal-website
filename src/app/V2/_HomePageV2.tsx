@@ -10,6 +10,7 @@ import V2Navbar from "./V2Navbar";
 import { FloatingNav } from "./Navbar/AceternityNavbar";
 import ResumeButton from "./ResumeButton";
 import Socials from "./Socials";
+import { Skeleton } from "@nextui-org/react";
 
 const navItems = [{ name: "About" }, { name: "Projects" }, { name: "Contact" }];
 
@@ -17,21 +18,17 @@ export default function HomePageV2() {
   const [prevFilter, setPrevFilter] = useState<string>("All");
   const [filter, setFilter] = useState<string>("All");
   const [arrowInView, setArrowInView] = useState<boolean>(false);
-  const [bentoView, setBentoView] = useState<boolean>(
-    window.innerWidth >= 1336
-  );
+  const [bentoView, setBentoView] = useState<boolean>(false);
   scroll((progress) => {
-
     if (progress > 0) {
       setArrowInView(false);
     }
   });
 
   useEffect(() => {
-    console.log(window.innerHeight)
-    setArrowInView(true)
+    setArrowInView(true);
     const handleResize = () => {
-      setBentoView(window.innerWidth >= 1336);
+      setBentoView((window.innerWidth || 0) >= 1336);
     };
 
     window.addEventListener("resize", handleResize);
@@ -65,7 +62,10 @@ export default function HomePageV2() {
           <V2Footer className="hover:cursor-default mb-4" />
         </motion.div>
       ) : (
-        <div className="flex flex-1 w-full h-full">Small screen</div>
+        <div className="flex flex-1 text-white h-screen items-center justify-center">
+          Currently developing for smaller viewports. Suggested is for screens
+          with a width of 1336px or higher.
+        </div>
       )}
     </>
   );

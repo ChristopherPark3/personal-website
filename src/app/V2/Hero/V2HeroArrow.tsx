@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+
+let window = global.window;
+
 export default function V2HeroArrow({
   setArrowInView,
 }: {
@@ -16,7 +19,9 @@ export default function V2HeroArrow({
       <button
         onClick={() => {
           setArrowInView(false);
-          if (window.innerHeight > 800) {
+          if (window.innerHeight == undefined) {
+            return;
+          } else if (window.innerHeight > 800) {
             window.scrollTo({ top: 800, behavior: "smooth" });
           } else {
             window.scrollTo({ top: 680, behavior: "smooth" });
