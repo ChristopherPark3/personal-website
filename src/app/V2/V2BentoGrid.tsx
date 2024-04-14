@@ -13,10 +13,40 @@ import { Skeleton } from "../components/Skeleton";
 import V2MyHobbies from "./V2MyHobbies";
 import V2AboutMe from "./V2AboutMe";
 
-export default function V2BentoGrid({ className }: { className: string }) {
+export default function V2BentoGrid({
+  className,
+  filter,
+}: {
+  className: string;
+  filter: string;
+}) {
   return (
     <BentoGrid className={className}>
       {items.map((item, i) => {
+        if (filter === "All") {
+          return (
+            <BentoGridItem
+              key={`${item.section}-${i}`}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={item.className}
+              section={item.section}
+            />
+          );
+        }
+        if (item.section !== filter) {
+          return (
+            <BentoGridItem
+              key={`${item.section}-${i}`}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={item.className + " opacity-25"}
+              section={item.section}
+            />
+          );
+        }
         return (
           <BentoGridItem
             key={`${item.section}-${i}`}
@@ -115,13 +145,13 @@ const items = [
       </div>
     ),
     header: <Skeleton />,
-    className: " h-full col-span-2",
+    className: " h-full col-span-3",
   },
   {
     section: "Contact",
     header: <ContactMe />,
 
-    className: " h-full col-span-4 text-white",
+    className: " h-full col-span-3 text-white",
   },
 ];
 

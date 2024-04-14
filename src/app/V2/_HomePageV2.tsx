@@ -26,17 +26,20 @@ export default function HomePageV2() {
       setArrowInView(true);
     }, 2000);
   }, []);
-  console.log(filter)
+  console.log(filter);
   return (
     <motion.div className="flex flex-1 flex-col items-center lg:px-20 2xl:px-36">
       <Socials />
       <ResumeButton />
-      <FloatingNav navItems={navItems} setFilter={setFilter}/>
+      <FloatingNav navItems={navItems} setFilter={setFilter} />
       <V2Hero />
       <AnimatePresence>
         {arrowInView && <V2HeroArrow setArrowInView={setArrowInView} />}
       </AnimatePresence>
-      <V2BentoGrid className="border-2 border-neutral-800 p-4 rounded-2xl mt-[30rem] min-w-full " />
+      <V2BentoGrid
+        filter={filter}
+        className="border-2 border-neutral-800 p-4 rounded-2xl mt-[30rem] min-w-full "
+      />
       <V2Footer className="hover:cursor-default mb-4" />
     </motion.div>
   );
