@@ -12,12 +12,16 @@ export const FloatingNav = ({
   navItems,
   className,
   setFilter,
+  prevFilter,
+  setPrevFilter,
 }: {
   navItems: {
     name: string;
     icon?: JSX.Element;
   }[];
   setFilter: (filter: string) => void;
+  prevFilter: string;
+  setPrevFilter: (filter: string) => void;
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
@@ -58,9 +62,12 @@ export const FloatingNav = ({
       >
         <button
           className="text-sm font-medium relative pl-4  py-2 rounded-full hover:cursor-pointer hover:text-white text-gray-300"
-          onClick={() => setFilter("All")}
-          onMouseOver={() => console.log("All")}
-          onMouseLeave={() => console.log("Left All")}
+          onClick={() => {
+            setFilter("All");
+            setPrevFilter("All");
+          }}
+          onMouseOver={() => setFilter("All")}
+          onMouseLeave={() => setFilter(prevFilter)}
         >
           All
         </button>
@@ -70,9 +77,12 @@ export const FloatingNav = ({
               "relative dark:text-neutral-50 items-center flex space-x-1 text-gray-300  hover:text-white text-sm hover:cursor-pointer"
             )}
             key={idx}
-            onClick={() => setFilter(navItem.name)}
-            onMouseOver={() => console.log(navItem.name)}
-            onMouseLeave={() => console.log(`Left ${navItem.name}`)}
+            onClick={() => {
+              setFilter(navItem.name);
+              setPrevFilter(navItem.name);
+            }}
+            onMouseOver={() => setFilter(navItem.name)}
+            onMouseLeave={() => setFilter(prevFilter)}
           >
             {navItem.name}
           </h1>
