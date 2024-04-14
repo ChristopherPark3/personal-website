@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Badge from "./Projects/V2Badge";
 import ContactMe from "./ContactMe";
+import { Skeleton } from "../components/Skeleton";
 
 export default function V2BentoGrid({ className }: { className: string }) {
   return (
@@ -111,8 +112,8 @@ const items = [
         <Badge name="React Query" />
       </div>
     ),
-    header: "test 1",
-    className: "bg-green-100 h-full col-span-2",
+    header: <Skeleton />,
+    className: " h-full col-span-2",
   },
   {
     section: "Contact",
