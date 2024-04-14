@@ -62,7 +62,7 @@ const items = [
     section: "Projects",
     title: "Enhance your social media presence with creatorcards",
     description: (
-      <div className="flex gap-1">
+      <div className="flex gap-1 flex-wrap">
         <Badge name="Next.js" />
         <Badge name="Supabase" />
         <Badge name="Prisma" />
@@ -73,8 +73,8 @@ const items = [
     header: (
       <Image
         src={creatorcards}
-        width={40}
-        height={100}
+        width={undefined}
+        height={undefined}
         alt="creator cards screen shot"
         className="w-full h-full rounded-lg"
       />
@@ -85,7 +85,7 @@ const items = [
     section: "Projects",
     title: "An opensource dev tool for tracking state in Vue3",
     description: (
-      <div className="flex gap-1">
+      <div className="flex gap-1 flex-wrap">
         <Badge name="Vue3" />
         <Badge name="VueFlow" />
         <Badge name="VSCode API" />
@@ -107,7 +107,7 @@ const items = [
     section: "Projects",
     title: "Keep a feed of newest releases from your favorite artists",
     description: (
-      <div className="flex gap-1">
+      <div className="flex gap-1 flex-wrap">
         <Badge name="React Native" />
         <Badge name="Expo" />
         <Badge name="Zustand" />

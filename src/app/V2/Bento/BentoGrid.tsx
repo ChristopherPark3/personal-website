@@ -51,7 +51,17 @@ export const BentoGridItem = ({
             </div>
           </div>
         </>
-      ) : null}
+      ) : (
+        <div className="grid grid-cols-2 gap-2 h-full">
+          {header}
+          <div className="flex flex-col justify-between p-2">
+            <div className="font-normal text-gray-400  mb-2 mt-">{title}</div>
+            <div className="font-medium text-gray-400 text-xs ">
+              {description}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

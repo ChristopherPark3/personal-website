@@ -10,7 +10,7 @@ import {
 export default function Info() {
   return (
     <div>
-      <TooltipProvider>
+      <TooltipProvider delayDuration={0}>
         <Tooltip>
           <TooltipTrigger asChild>
             <Image
