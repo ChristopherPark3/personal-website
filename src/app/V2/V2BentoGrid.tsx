@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 import Image from "next/image";
 import Badge from "./Projects/V2Badge";
-import ContactMe from "./ContactMe";
+import ContactMe from "./V2ContactMe";
 import { Skeleton } from "../components/Skeleton";
 import V2MyHobbies from "./V2MyHobbies";
 import V2AboutMe from "./V2AboutMe";

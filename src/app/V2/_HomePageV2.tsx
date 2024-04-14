@@ -8,9 +8,7 @@ import V2Footer from "./V2Footer";
 import V2BentoGrid from "./V2BentoGrid";
 import V2Navbar from "./V2Navbar";
 import { FloatingNav } from "./Navbar/AceternityNavbar";
-import ResumeButton from "./ResumeButton";
-import Socials from "./Socials";
-import { Skeleton } from "@nextui-org/react";
+import Socials from "./V2Socials";
 
 const navItems = [{ name: "About" }, { name: "Projects" }, { name: "Contact" }];
 
@@ -18,7 +16,7 @@ export default function HomePageV2() {
   const [prevFilter, setPrevFilter] = useState<string>("All");
   const [filter, setFilter] = useState<string>("All");
   const [arrowInView, setArrowInView] = useState<boolean>(false);
-  const [bentoView, setBentoView] = useState<boolean>(false);
+  const [bentoView, setBentoView] = useState<boolean>(window.innerWidth >= 1336);
   scroll((progress) => {
     if (progress > 0) {
       setArrowInView(false);
