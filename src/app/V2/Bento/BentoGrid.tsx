@@ -40,16 +40,18 @@ export const BentoGridItem = ({
         className
       )}
     >
-      {header}
-      <div className="">
-        {icon}
-        <div className="font-normal text-gray-400  mb-2 mt-">
-          {title}
-        </div>
-        <div className="font-medium text-gray-400 text-xs ">
-          {description}
-        </div>
-      </div>
+      {section !== "Projects" ? (
+        <>
+          {header}
+          <div className="">
+            {icon}
+            <div className="font-normal text-gray-400  mb-2 mt-">{title}</div>
+            <div className="font-medium text-gray-400 text-xs ">
+              {description}
+            </div>
+          </div>
+        </>
+      ) : null}
     </div>
   );
 };

@@ -24,6 +24,7 @@ export default function V2BentoGrid({ className }: { className: string }) {
             description={item.description}
             header={item.header}
             className={item.className}
+            section={item.section}
           />
         );
       })}
@@ -33,7 +34,7 @@ export default function V2BentoGrid({ className }: { className: string }) {
 
 const items = [
   {
-    section: "Projects",
+    section: "About",
     header: (
       <Image
         src={headshot1}
