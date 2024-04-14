@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chris Park",
+  title: "Christopher Park Portfolio",
   description: "Chris Park Personal Portfolio",
 };
 
