@@ -9,6 +9,7 @@ import V2BentoGrid from "./V2BentoGrid";
 import V2Navbar from "./V2Navbar";
 import { FloatingNav } from "./Navbar/AceternityNavbar";
 import ResumeButton from "./ResumeButton";
+import Socials from "./Socials";
 
 const navItems = [{ name: "About" }, { name: "Projects" }, { name: "Contact" }];
 
@@ -25,7 +26,8 @@ export default function HomePageV2() {
     }, 2000);
   }, []);
   return (
-    <motion.div className="flex flex-1 flex-col items-center px-36">
+    <motion.div className="flex flex-1 flex-col items-center lg:px-20 2xl:px-36">
+      <Socials />
       <ResumeButton />
       <FloatingNav navItems={navItems} />
       <V2Hero />
@@ -33,7 +35,7 @@ export default function HomePageV2() {
         {arrowInView && <V2HeroArrow setArrowInView={setArrowInView} />}
       </AnimatePresence>
       <V2BentoGrid className="border-2 border-neutral-800 p-4 rounded-2xl mt-[30rem] min-w-full " />
-      <V2Footer className="hover:cursor-default" />
+      <V2Footer className="hover:cursor-default mb-4" />
     </motion.div>
   );
 }
