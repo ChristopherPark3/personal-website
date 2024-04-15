@@ -76,7 +76,6 @@ const items = [
         className="h-52 w-52 aspect-square"
       />
     ),
-    // description: "Software Engineer",
     className:
       " flex items-center justify-center  min-h-full w-full col-span-1 row-span-1 pt-10",
   },
@@ -119,7 +118,7 @@ const items = [
       <Image
         src={creatorcards}
         alt="creator cards screen shot"
-        className="w-full h-full rounded-lg aspect-video"
+        className="w-full h-full rounded-lg"
       />
     ),
     className: "bg-neutral-800 h-full col-span-3",

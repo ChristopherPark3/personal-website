@@ -40,7 +40,7 @@ export default function HomePageV2() {
   return (
     <>
       {bentoView ? (
-        <motion.div className="flex flex-1 flex-col items-center lg:px-20 2xl:px-36">
+        <motion.div className="flex flex-1 flex-col items-center lg:px-16 2xl:px-32">
           <Socials />
 
           <FloatingNav
