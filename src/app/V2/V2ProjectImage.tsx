@@ -19,7 +19,7 @@ export default function V2ProjectImage({
       title={"Click me!"}
       className="h-full w-full"
     >
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full ">
         <a className="w-full h-full" href={href} target="_blank">
           <Image
             src={image}
