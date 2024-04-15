@@ -150,8 +150,12 @@ const items = [
       </div>
     ),
 
-    className: " h-full col-span-3 text-white",
+    className: " h-full col-span-2 text-white",
   },
+  {
+    section: "Image",
+    header: "Put cartman with eyes here"
+  }
 ];
 
 // key={i}
