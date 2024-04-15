@@ -16,7 +16,9 @@ export default function HomePageV2() {
   const [prevFilter, setPrevFilter] = useState<string>("All");
   const [filter, setFilter] = useState<string>("All");
   const [arrowInView, setArrowInView] = useState<boolean>(false);
-  const [bentoView, setBentoView] = useState<boolean>(window.innerWidth >= 1336);
+  const [bentoView, setBentoView] = useState<boolean>(
+    window.innerWidth >= 1336
+  );
   scroll((progress) => {
     if (progress > 0) {
       setArrowInView(false);
@@ -60,7 +62,7 @@ export default function HomePageV2() {
           <V2Footer className="hover:cursor-default mb-4" />
         </motion.div>
       ) : (
-        <div className="flex flex-1 text-white h-screen items-center justify-center">
+        <div className="flex flex-1 text-white h-screen items-center justify-center p-8">
           Currently developing for smaller viewports. Suggested is for screens
           with a width of 1336px or higher.
         </div>
