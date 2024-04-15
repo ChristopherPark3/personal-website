@@ -1,4 +1,9 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+
 import { cn } from "../../../../utils/cn";
+import { useRef } from "react";
 export const BentoGrid = ({
   className,
   children,
@@ -6,15 +11,23 @@ export const BentoGrid = ({
   className?: string;
   children?: React.ReactNode;
 }) => {
+  const bentoRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: bentoRef,
+    offset: ['0 1', '1 1'],
+  });
+  const bentoOpacity = useTransform(scrollYProgress, [0,1], [0,1])
   return (
-    <div
+    <motion.div
+      ref={bentoRef}
       className={cn(
         "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-6 md:grid-rows-3  gap-4 max-w-7xl mx-auto min-h-[100vh] xl:max-h-[90vh]",
         className
       )}
+      style={{opacity: bentoOpacity}}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
