@@ -91,7 +91,7 @@ export const FloatingNav = ({
           className={cn(
             "relative dark:text-neutral-50 items-center flex space-x-1 text-gray-300  hover:text-white text-sm hover:cursor-pointer"
           )}
-          href="https://christopher-park-resume.s3.amazonaws.com/SWE+Resume+Most+Updated.pdff"
+          href="https://christopher-park-resume.s3.amazonaws.com/SWE+Resume+Most+Updated.pdf"
           target="_blank"
         >
           Resume
