@@ -33,7 +33,6 @@ export default function V2Navbar() {
               <button
                 className="text-xs text-gray-200 hover:text-white hover:cursor-pointer m-0"
                 onMouseEnter={() => {
-                  console.log("entered: ", current, i);
                   setHoverIndex(i);
                 }}
                 onMouseLeave={() => console.log("left: ", current)}
