@@ -23,8 +23,6 @@ export default function V2BentoGrid({
   className: string;
   filter: string;
 }) {
-
-
   return (
     <BentoGrid className={className}>
       {items.map((item, i) => {
@@ -102,23 +100,10 @@ const items = [
         <Badge name="Prisma" />
         <Badge name="React Query" />
         <Badge name="TailwindCSS" />
-        <a
-          className="text-sm flex items-center gap-2 text-white ml-4 rounded-full hover:translate-x-1 transition ease-in-out"
-          href="https://www.creatorcards.us"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit{" "}
-          <Image
-            src={ArrowRight}
-            alt="Christopher Park Arrow Right"
-            className=""
-          />
-        </a>
       </div>
     ),
     header: (
-      <V2ProjectImage image={creatorcards} href="https://www.creatorcards.us"/>
+      <V2ProjectImage image={creatorcards} href="https://www.creatorcards.us" />
     ),
     className: "bg-neutral-800 h-full col-span-3",
   },
@@ -131,30 +116,9 @@ const items = [
         <Badge name="VueFlow" />
         <Badge name="VSCode API" />
         <Badge name="Webview API" />
-        <a
-          className="text-sm flex items-center gap-2 text-white ml-4 rounded-full hover:translate-x-1 transition ease-linear"
-          href="https://www.visivue.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit{" "}
-          <Image
-            src={ArrowRight}
-            alt="Christopher Park Arrow Right"
-            className=""
-          />
-        </a>
       </div>
     ),
-    header: (
-      <Image
-        src={Visivue}
-        width={undefined}
-        height={undefined}
-        alt="Visivue screen shot"
-        className="w-full h-full rounded-lg"
-      />
-    ),
+    header: <V2ProjectImage image={Visivue} href="https://www.visivue.org" />,
     className: "h-full col-span-3",
   },
   {
