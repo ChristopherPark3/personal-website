@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Analytics />
         <Providers>
           <main className="light text-foreground bg-neutral-900 flex flex-1 w-screen">
             {children}
+            <Analytics />
           </main>
         </Providers>
       </body>
