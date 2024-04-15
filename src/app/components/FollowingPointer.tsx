@@ -9,10 +9,12 @@ export const FollowerPointerCard = ({
   children,
   className,
   title,
+  color,
 }: {
   children: React.ReactNode;
   className?: string;
   title?: string | React.ReactNode;
+  color: number;
 }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -53,7 +55,7 @@ export const FollowerPointerCard = ({
       className={cn("relative", className)}
     >
       <AnimatePresence>
-        {isInside && <FollowPointer x={x} y={y} title={title} />}
+        {isInside && <FollowPointer color={color} x={x} y={y} title={title} />}
       </AnimatePresence>
       {children}
     </div>
@@ -64,9 +66,11 @@ export const FollowPointer = ({
   x,
   y,
   title,
+  color,
 }: {
   x: any;
   y: any;
+  color: number;
   title?: string | React.ReactNode;
 }) => {
   const colors = [
@@ -80,7 +84,7 @@ export const FollowPointer = ({
   ];
   return (
     <motion.div
-      className="h-4 w-4 rounded-full absolute z-50 bg-red-900"
+      className="h-4 w-4 rounded-full absolute z-[500]"
       style={{
         top: y,
         left: x,
@@ -113,7 +117,7 @@ export const FollowPointer = ({
       </svg>
       <motion.div
         style={{
-          backgroundColor: colors[Math.floor(Math.random() * colors.length)],
+          backgroundColor: colors[color],
         }}
         initial={{
           scale: 0.5,

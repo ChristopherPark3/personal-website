@@ -7,21 +7,27 @@ import { FollowerPointerCard } from "../components/FollowingPointer";
 export default function V2ProjectImage({
   image,
   href,
+  color,
 }: {
   image: any;
   href: string;
+  color: number;
 }) {
   return (
-    <div className="relative w-full h-full">
-      <a className="w-full h-full" href={href} target="_blank">
-        <FollowerPointerCard title={"Visit!"} className="h-full w-full">
+    <FollowerPointerCard
+      color={color}
+      title={"Click me!"}
+      className="h-full w-full"
+    >
+      <div className="relative w-full h-full">
+        <a className="w-full h-full" href={href} target="_blank">
           <Image
             src={image}
             alt="creator cards screen shot"
             className="w-full h-full rounded-lg hover:scale-[102%] hover:shadow-lg hover:shadow-black transition ease-linear"
           />
-        </FollowerPointerCard>
-      </a>
-    </div>
+        </a>
+      </div>
+    </FollowerPointerCard>
   );
 }

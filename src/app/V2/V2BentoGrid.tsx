@@ -15,6 +15,7 @@ import V2MyHobbies from "./V2MyHobbies";
 import V2AboutMe from "./V2AboutMe";
 import { useState } from "react";
 import V2ProjectImage from "./V2ProjectImage";
+import { FollowerPointerCard } from "../components/FollowingPointer";
 
 export default function V2BentoGrid({
   className,
@@ -103,7 +104,7 @@ const items = [
       </div>
     ),
     header: (
-      <V2ProjectImage image={creatorcards} href="https://www.creatorcards.us" />
+      <V2ProjectImage color={0} image={creatorcards} href="https://www.creatorcards.us" />
     ),
     className: "bg-neutral-800 h-full col-span-3",
   },
@@ -118,7 +119,7 @@ const items = [
         <Badge name="Webview API" />
       </div>
     ),
-    header: <V2ProjectImage image={Visivue} href="https://www.visivue.org" />,
+    header: <V2ProjectImage color={3} image={Visivue} href="https://www.visivue.org" />,
     className: "h-full col-span-3",
   },
   {
