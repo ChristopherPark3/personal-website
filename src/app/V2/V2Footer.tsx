@@ -1,3 +1,5 @@
+import { FollowerPointerCard } from "../components/FollowingPointer";
+
 export default function V2Footer({ className }: { className?: string }) {
   return (
     <footer className={className}>
@@ -15,7 +17,7 @@ export default function V2Footer({ className }: { className?: string }) {
           <a className="hover:text-gray-300" href="https://www.framer.com/">
             Framer Motion
           </a>
-          , {" "}
+          ,{" "}
           <a className="hover:text-gray-300" href="https://www.hyperui.dev/">
             HyperUI
           </a>
@@ -29,8 +31,6 @@ export default function V2Footer({ className }: { className?: string }) {
           </a>
           .
         </p>
-
-        
       </div>
     </footer>
   );

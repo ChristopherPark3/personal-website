@@ -4,6 +4,7 @@ import { Inter, Poppins } from "next/font/google";
 import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Christopher Park Portfolio",
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <Analytics />
         <Providers>
           <main className="light text-foreground bg-neutral-900 flex flex-1 w-screen">
             {children}
