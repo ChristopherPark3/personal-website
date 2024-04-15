@@ -3,9 +3,8 @@
 import { BentoGrid, BentoGridItem } from "./Bento/BentoGrid";
 import headshot1 from "../../../public/Headshot1.svg";
 import creatorcards from "../../../public/creatorcards.svg";
-import creatorcards2 from "../../../public/creatorcards_screenshot.png";
-import ArrowRight from "../../../public/ArrowRight.svg";
 import Visivue from "../../../public/Visivue.svg";
+import ArrowRight from "../../../public/ArrowRight.svg";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
@@ -14,6 +13,8 @@ import ContactMe from "./V2ContactMe";
 import { Skeleton } from "../components/Skeleton";
 import V2MyHobbies from "./V2MyHobbies";
 import V2AboutMe from "./V2AboutMe";
+import { useState } from "react";
+import V2ProjectImage from "./V2ProjectImage";
 
 export default function V2BentoGrid({
   className,
@@ -22,6 +23,8 @@ export default function V2BentoGrid({
   className: string;
   filter: string;
 }) {
+
+
   return (
     <BentoGrid className={className}>
       {items.map((item, i) => {
@@ -115,11 +118,7 @@ const items = [
       </div>
     ),
     header: (
-      <Image
-        src={creatorcards}
-        alt="creator cards screen shot"
-        className="w-full h-full rounded-lg"
-      />
+      <V2ProjectImage image={creatorcards} href="https://www.creatorcards.us"/>
     ),
     className: "bg-neutral-800 h-full col-span-3",
   },
