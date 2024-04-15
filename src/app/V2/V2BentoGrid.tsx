@@ -177,9 +177,9 @@ const items = [
     section: "Contact",
     header: (
       <div className="flex flex-col gap-4 text-xl">
-        Feel free to reach out to me: 
+        Feel free to reach out to me:
         <a
-          className="font-semibold text-xl hover:scale-105 text-[#0077b6] "
+          className="font-semibold text-xl text-blue-400 hover:text-blue-500 transition ease-in-out"
           href="mailto:admin@creatorcards.us"
         >
           christopherjcpark00@gmail.com
