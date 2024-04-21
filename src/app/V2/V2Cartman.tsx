@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Cartman from "../../../public/Cartman.svg";
-import RightEye from "../../../public/RightEye.png";
-import LeftEye from "../../../public/LeftEye.png";
+import Eye from "../../../public/NewEye.png";
+
 import { useEffect } from "react";
 
 export default function V2Cartman() {
@@ -14,13 +14,15 @@ export default function V2Cartman() {
       const rekt = anchor?.getBoundingClientRect();
       const anchorX = (rekt?.left! + rekt?.width!) / 2;
       const anchorY = (rekt?.top! + rekt?.height!) / 2;
-      const eyes = document.querySelectorAll("#eye");
+      const eyes: NodeListOf<HTMLImageElement> =
+        document.querySelectorAll("#eye");
 
       const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
-      console.log(angleDeg);
-      eyes.forEach((eye: any, idx: number, eyes: NodeListOf<Element>) => {
-        eye.setAttribute("style", `transform: rotate(${90 + angleDeg}deg)`);
-      });
+      eyes.forEach(
+        (eye: HTMLImageElement, idx: number, eyes: NodeListOf<Element>) => {
+          eye.style.transform = `rotate(${angleDeg}deg)`;
+        }
+      );
     });
   }, []);
 
@@ -45,14 +47,18 @@ export default function V2Cartman() {
         <div id="eyes">
           <Image
             id="eye"
-            src={RightEye}
+            src={Eye}
             alt="ChristopherPark Cartman Right Eye"
+            width={0}
+            height={0}
             className="absolute h-3 w-3 top-[32%] left-[40%] z-50"
           />
           <Image
             id="eye"
-            src={LeftEye}
+            src={Eye}
             alt="Christopher Park Cartman Left eye"
+            width={0}
+            height={0}
             className="absolute h-3 w-3 top-[32%] left-[57%] z-50"
             style={{}}
           />
