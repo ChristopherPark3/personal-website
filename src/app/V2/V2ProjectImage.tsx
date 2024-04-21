@@ -17,7 +17,7 @@ export default function V2ProjectImage({
     <FollowerPointerCard
       color={color}
       title={"Click me!"}
-      className="h-full w-full"
+      className={`h-full w-full y-10`}
     >
       <div className="relative w-full h-full ">
         <a className="w-full h-full" href={href} target="_blank">

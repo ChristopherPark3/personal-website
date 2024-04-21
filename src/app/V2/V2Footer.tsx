@@ -1,5 +1,3 @@
-import { FollowerPointerCard } from "../components/FollowingPointer";
-
 export default function V2Footer({ className }: { className?: string }) {
   return (
     <footer className={className}>

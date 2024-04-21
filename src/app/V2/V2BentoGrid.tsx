@@ -15,7 +15,6 @@ import V2MyHobbies from "./V2MyHobbies";
 import V2AboutMe from "./V2AboutMe";
 import { useState } from "react";
 import V2ProjectImage from "./V2ProjectImage";
-import { FollowerPointerCard } from "../components/FollowingPointer";
 
 export default function V2BentoGrid({
   className,
@@ -65,6 +64,7 @@ export default function V2BentoGrid({
     </BentoGrid>
   );
 }
+
 
 const items = [
   {

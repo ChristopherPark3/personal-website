@@ -89,6 +89,7 @@ export const FollowPointer = ({
         top: y,
         left: x,
         pointerEvents: "none",
+        cursor: "none",
       }}
       initial={{
         scale: 1,
@@ -123,7 +124,7 @@ export const FollowPointer = ({
           "px-2 py-2 bg-neutral-200 text-white whitespace-nowrap min-w-max text-xs rounded-full"
         }
       >
-        {title || `William Shakespeare`}
+        {title}
       </motion.div>
     </motion.div>
   );
