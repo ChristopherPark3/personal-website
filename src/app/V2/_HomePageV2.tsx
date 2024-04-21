@@ -38,7 +38,7 @@ export default function HomePageV2() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log(filter);
+
   return (
     <>
       {bentoView ? (

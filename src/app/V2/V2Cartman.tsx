@@ -9,8 +9,8 @@ export default function V2Cartman() {
     const anchor = document.getElementById("anchor");
     const rekt = anchor?.getBoundingClientRect();
 
-    const anchorX = (rekt?.left! + rekt?.width!) / 2;
-    const anchorY = (rekt?.top! + rekt?.height!) / 2;
+    const anchorX = rekt?.left! + rekt?.width! / 2;
+    const anchorY = rekt?.top! + rekt?.height! / 2;
     const eyes: NodeListOf<HTMLImageElement> =
       document.querySelectorAll("#eye");
     document.addEventListener("mousemove", (e) => {
@@ -18,10 +18,9 @@ export default function V2Cartman() {
       const mouseY = e.clientY;
 
       const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
-
       eyes.forEach(
         (eye: HTMLImageElement, idx: number, eyes: NodeListOf<Element>) => {
-          eye.style.transform = `rotate(${angleDeg}deg)`;
+          eye.style.transform = `rotate(${90 + angleDeg}deg)`;
         }
       );
     });
