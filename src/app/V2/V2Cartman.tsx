@@ -6,18 +6,19 @@ import { useEffect } from "react";
 
 export default function V2Cartman() {
   useEffect(() => {
+    const anchor = document.getElementById("anchor");
+    const rekt = anchor?.getBoundingClientRect();
+
+    const anchorX = (rekt?.left! + rekt?.width!) / 2;
+    const anchorY = (rekt?.top! + rekt?.height!) / 2;
+    const eyes: NodeListOf<HTMLImageElement> =
+      document.querySelectorAll("#eye");
     document.addEventListener("mousemove", (e) => {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
 
-      const anchor = document.getElementById("anchor");
-      const rekt = anchor?.getBoundingClientRect();
-      const anchorX = (rekt?.left! + rekt?.width!) / 2;
-      const anchorY = (rekt?.top! + rekt?.height!) / 2;
-      const eyes: NodeListOf<HTMLImageElement> =
-        document.querySelectorAll("#eye");
-
       const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
+
       eyes.forEach(
         (eye: HTMLImageElement, idx: number, eyes: NodeListOf<Element>) => {
           eye.style.transform = `rotate(${angleDeg}deg)`;
