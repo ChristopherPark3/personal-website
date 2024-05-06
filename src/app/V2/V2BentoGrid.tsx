@@ -1,3 +1,5 @@
+"use client";
+
 import { BentoGrid, BentoGridItem } from "./Bento/BentoGrid";
 import headshot1 from "../../../public/Headshot1.svg";
 import creatorcards from "../../../public/creatorcards.svg";
@@ -10,6 +12,12 @@ import V2MyHobbies from "./V2MyHobbies";
 import V2AboutMe from "./V2AboutMe";
 import V2ProjectImage from "./V2ProjectImage";
 import V2Cartman from "./V2Cartman";
+import { useRef } from "react";
+
+export interface RefType {
+  [key:string]: HTMLDivElement | null;
+
+}
 
 export default function V2BentoGrid({
   className,
@@ -18,9 +26,21 @@ export default function V2BentoGrid({
   className: string;
   filter: string;
 }) {
+  const allRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const references = {
+    allRef: allRef,
+    aboutRef: aboutRef,
+    projectsRef: projectsRef,
+    contactRef: contactRef,
+  };
+
   return (
     <BentoGrid className={className}>
-      {items.map((item, i) => {
+      {items.map((item: any, i) => {
+
         if (filter === "All") {
           return (
             <BentoGridItem
@@ -74,16 +94,19 @@ const items = [
     ),
     className:
       " flex items-center justify-center  min-h-full w-full col-span-1 row-span-1 pt-10",
+    ref: "aboutRef",
   },
   {
     section: "About",
     header: <V2AboutMe />,
     className: " min-h-[100%] col-span-3 row-span-1",
+    ref: "aboutRef",
   },
   {
     section: "About",
     header: <V2MyHobbies />,
     className: " h-full col-span-2",
+    ref: "aboutRef",
   },
   {
     section: "Projects",
@@ -105,6 +128,7 @@ const items = [
       />
     ),
     className: "bg-neutral-800 h-full col-span-3",
+    ref: "projectsRef",
   },
   {
     section: "Projects",
@@ -125,6 +149,7 @@ const items = [
       />
     ),
     className: "h-full col-span-3",
+    ref: "projectsRef",
   },
   {
     section: "Projects",
@@ -139,6 +164,7 @@ const items = [
     ),
     header: <Skeleton />,
     className: " h-full col-span-3",
+    ref: "projectsRef",
   },
   {
     section: "Contact",
@@ -155,6 +181,7 @@ const items = [
     ),
 
     className: " h-full col-span-2 text-white",
+    ref: "contactRef",
   },
   {
     section: "Image",

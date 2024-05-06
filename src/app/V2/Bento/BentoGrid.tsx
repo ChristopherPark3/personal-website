@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { cn } from "../../../../utils/cn";
-import { useRef } from "react";
+import { Ref, useRef } from "react";
 export const BentoGrid = ({
   className,
   children,
@@ -14,9 +14,9 @@ export const BentoGrid = ({
   const bentoRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: bentoRef,
-    offset: ['0 1', '1 1'],
+    offset: ["0 1", "1 1"],
   });
-  const bentoOpacity = useTransform(scrollYProgress, [0,1], [0,1])
+  const bentoOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
   return (
     <motion.div
       ref={bentoRef}
@@ -24,7 +24,7 @@ export const BentoGrid = ({
         "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-6 md:grid-rows-3  gap-4 max-w-7xl mx-auto min-h-[100vh] xl:max-h-[90vh]",
         className
       )}
-      style={{opacity: bentoOpacity}}
+      style={{ opacity: bentoOpacity }}
     >
       {children}
     </motion.div>
@@ -38,7 +38,9 @@ export const BentoGridItem = ({
   header,
   icon,
   section,
+  currentRef,
 }: {
+  currentRef?: Ref<HTMLDivElement>;
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
@@ -48,6 +50,7 @@ export const BentoGridItem = ({
 }) => {
   return (
     <div
+      ref={currentRef}
       className={cn(
         "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 bg-neutral-800 border-neutral-700 border-2 justify-between flex flex-col space-y-4 text-gray-200",
         className
