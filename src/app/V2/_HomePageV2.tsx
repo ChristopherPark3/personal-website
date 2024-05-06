@@ -57,7 +57,7 @@ export default function HomePageV2() {
           </AnimatePresence>
           <V2BentoGrid
             filter={filter}
-            className="border-2 border-neutral-800 p-4 rounded-2xl mt-[25rem] 2xl:mt-[30rem] min-w-full "
+            className=" p-4  mt-[25rem] 2xl:mt-[30rem] min-w-full "
           />
           <V2Footer className="hover:cursor-default mb-4" />
         </motion.div>

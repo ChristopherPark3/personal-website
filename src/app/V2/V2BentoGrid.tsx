@@ -1,19 +1,13 @@
-"use client";
-
 import { BentoGrid, BentoGridItem } from "./Bento/BentoGrid";
 import headshot1 from "../../../public/Headshot1.svg";
 import creatorcards from "../../../public/creatorcards.svg";
 import Visivue from "../../../public/Visivue.svg";
-import ArrowRight from "../../../public/ArrowRight.svg";
-import { motion } from "framer-motion";
 
 import Image from "next/image";
 import Badge from "./Projects/V2Badge";
-import ContactMe from "./V2ContactMe";
 import { Skeleton } from "../components/Skeleton";
 import V2MyHobbies from "./V2MyHobbies";
 import V2AboutMe from "./V2AboutMe";
-import { useState } from "react";
 import V2ProjectImage from "./V2ProjectImage";
 import V2Cartman from "./V2Cartman";
 
