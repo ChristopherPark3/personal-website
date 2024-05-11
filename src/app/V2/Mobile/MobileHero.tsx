@@ -2,11 +2,12 @@ import Image from "next/image";
 import headshot from "../../../../public/Headshot1.svg";
 import headshotOutline from "../../../../public/headshot_background_outline.svg";
 import headshotBackground from "../../../../public/headshot_background.svg";
+import MobileSocials from "./MobileSocials";
 
 const MobileHero = () => {
   return (
     <div className="flex flex-col gap-2 ">
-      <div className=" relaitve">
+      {/* <div className=" relaitve">
         <Image
           src={headshot}
           width={100}
@@ -28,8 +29,8 @@ const MobileHero = () => {
           alt="Christopher Park headshot"
           className="absolute h-52 w-52 z-40"
         />
-      </div>
-      <div className="flex flex-col gap-2 mt-32">
+      </div> */}
+      <div className="flex flex-col gap-2">
         <h1 className="text-gray-200 text-shadow-xs shadow-slate-50 text-6xl text-wrap">
           Christopher Park
         </h1>
@@ -37,6 +38,7 @@ const MobileHero = () => {
           Adaptable software engineer capable of wearing many hats
         </p>
       </div>
+      <MobileSocials />
     </div>
   );
 };
