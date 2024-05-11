@@ -1,4 +1,6 @@
+
 import MobileAboutMe from "./MobileAboutMe";
+import MobileFooter from "./MobileFooter";
 import MobileHero from "./MobileHero";
 import MobileProjects from "./MobileProjects";
 
@@ -11,6 +13,7 @@ const MobileViewV2 = () => {
       <MobileHero />
       <MobileAboutMe />
       <MobileProjects />
+      <MobileFooter />
     </div>
   );
 };
