@@ -9,6 +9,7 @@ import V2BentoGrid from "./V2BentoGrid";
 import V2Navbar from "./V2Navbar";
 import { FloatingNav } from "./Navbar/AceternityNavbar";
 import Socials from "./V2Socials";
+import MobileViewV2 from "./Mobile/_MobileViewV2";
 
 const navItems = [{ name: "About" }, { name: "Projects" }, { name: "Contact" }];
 
@@ -62,10 +63,7 @@ export default function HomePageV2() {
           <V2Footer className="hover:cursor-default mb-4" />
         </motion.div>
       ) : (
-        <div className="flex flex-1 text-white h-screen items-center justify-center p-8">
-          Currently developing for smaller viewports. Suggested is for screens
-          with a width of 1336px or higher.
-        </div>
+        <MobileViewV2 />
       )}
     </>
   );
