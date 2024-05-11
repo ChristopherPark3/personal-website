@@ -6,7 +6,7 @@ import MobileSocials from "./MobileSocials";
 
 const MobileHero = () => {
   return (
-    <div className="flex flex-col gap-2 ">
+    <div className="flex flex-col gap-4 mt-4">
       {/* <div className=" relaitve">
         <Image
           src={headshot}
@@ -31,7 +31,7 @@ const MobileHero = () => {
         />
       </div> */}
       <div className="flex flex-col gap-2">
-        <h1 className="text-gray-200 text-shadow-xs shadow-slate-50 text-6xl text-wrap">
+        <h1 className="text-gray-200 text-shadow-xs shadow-slate-50 text-5xl text-wrap font-semibold">
           Christopher Park
         </h1>
         <p className="text-lg text-gray-500">

@@ -10,7 +10,7 @@ const MobileSocials = () => {
             href="https://www.linkedin.com/in/christopherjcpark"
             rel="noreferrer"
             target="_blank"
-            className="text-neutral-500 transition hover:text-neutral-500/75"
+            className="text-neutral-300 transition hover:text-neutral-300/75"
           >
             <span className="sr-only">LinkedIn</span>
             <svg
@@ -33,7 +33,7 @@ const MobileSocials = () => {
             href="https://www.instagram.com/ceepeetres/"
             rel="noreferrer"
             target="_blank"
-            className="text-neutral-500 transition hover:text-neutral-500/75"
+            className="text-neutral-300 transition hover:text-neutral-300/75"
           >
             <span className="sr-only">Instagram</span>
             <svg
@@ -56,7 +56,7 @@ const MobileSocials = () => {
             href="https://www.github.com/ChristopherPark3"
             rel="noreferrer"
             target="_blank"
-            className="text-neutral-500 transition hover:text-neutral-500/75"
+            className="text-neutral-300 transition hover:text-neutral-300/75"
           >
             <span className="sr-only">GitHub</span>
             <svg
