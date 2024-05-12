@@ -8,3 +8,9 @@ export const Skeleton = ({ className }: { className?: string }) => (
     Currently developing...
   </div>
 );
+
+export const MobileSkeleton = () => (
+  <div className="h-32 w-60 flex items-center justify-center bg-gradient-to-br from-neutral-800  to-neutral-700 text-white">
+    Currently developing...
+  </div>
+);

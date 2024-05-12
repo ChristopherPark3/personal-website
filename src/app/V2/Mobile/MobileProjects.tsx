@@ -2,7 +2,7 @@ import Image from "next/image";
 import MobileProject, { MobileProjectType } from "./MobileProject";
 import CreatorCards from "../../../../public/creatorcards.svg";
 import VisiVue from "../../../../public/Visivue.svg";
-import { Skeleton } from "@/app/components/Skeleton";
+import { MobileSkeleton } from "@/app/components/Skeleton";
 
 const projects: MobileProjectType[] = [
   {
@@ -25,7 +25,7 @@ const projects: MobileProjectType[] = [
   {
     name: "SoundLens",
     component: (
-      <Skeleton className=" min-h-[128px] w-60 rounded-none text-white" />
+     <MobileSkeleton />
     ),
     description:
       "Stay up to date with a feed of the newest releases from your favorite artists. Stemming from my love of music, I find that very often, life happens and I miss a lot of releases from my favorite artists. The list of new songs/projects builds up to a point where I don't feel the desire to manually look up each artist to find their newest music.",
