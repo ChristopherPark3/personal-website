@@ -3,33 +3,11 @@ import headshot from "../../../../public/Headshot1.svg";
 import headshotOutline from "../../../../public/headshot_background_outline.svg";
 import headshotBackground from "../../../../public/headshot_background.svg";
 import MobileSocials from "./MobileSocials";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 const MobileHero = () => {
   return (
     <div className="flex flex-col gap-4 mt-4">
-      {/* <div className=" relaitve">
-        <Image
-          src={headshot}
-          width={100}
-          height={100}
-          alt="Christopher Park headshot"
-          className="absolute z-50"
-        />
-        <Image
-          src={headshotBackground}
-          width={150}
-          height={150}
-          alt="Christopher Park headshot"
-          className="absolute h-52 w-52 z-30"
-        />
-        <Image
-          src={headshotOutline}
-          width={150}
-          height={150}
-          alt="Christopher Park headshot"
-          className="absolute h-52 w-52 z-40"
-        />
-      </div> */}
       <div className="flex flex-col gap-2">
         <h1 className="text-gray-200 text-shadow-xs shadow-slate-50 text-5xl text-wrap font-semibold">
           Christopher Park
@@ -39,6 +17,16 @@ const MobileHero = () => {
         </p>
       </div>
       <MobileSocials />
+      <div className="flex flex-row gap-2 items-center mt-6">
+        <a
+          href="https://christopher-park-resume.s3.amazonaws.com/SWE+Resume+Most+Updated.pdf"
+          target="_blank"
+          className="text-neutral-300 text-md"
+        >
+          View my resume
+        </a>
+        <SquareArrowOutUpRight className="h-5 w-5 text-neutral-300" />
+      </div>
     </div>
   );
 };

@@ -12,19 +12,31 @@ const projects: MobileProjectType[] = [
     component: (
       <Image alt="Creator Cards" src={CreatorCards} className="h-32 w-60" />
     ),
+    description: "Enhance your social media presence with Creator Cards",
+    techs: ["Next.js", "Supabase", "Prisma", "React Query", "TailwindCSS"],
   },
   {
     name: "VisiVue",
     href: "https://www.visivue.org",
     component: <Image alt="VisiVue" src={VisiVue} className="h-32 w-60" />,
+    description: "An opensource dev tool for tracking state in Vue3",
+    techs: ["Vue3", "VueFlow", "VSCode API", "Webview API"],
   },
-  { name: "SoundLens", component: <Skeleton className=" min-h-[128px] w-60 rounded-none text-white" /> },
+  {
+    name: "SoundLens",
+    component: (
+      <Skeleton className=" min-h-[128px] w-60 rounded-none text-white" />
+    ),
+    description:
+      "Stay up to date with a feed of the newest releases from your favorite artists",
+    techs: ["React Native", "Expo", "Zustand", "React Query"],
+  },
 ];
 
 const MobileProjects = () => {
   return (
     <div className="flex flex-col mt-16 gap-6">
-      <h1 className="text-white text-lg ">Projects</h1>
+      <h1 className="text-white text-xl ">Projects</h1>
       {projects.map((project) => {
         return (
           <div key={project.name}>

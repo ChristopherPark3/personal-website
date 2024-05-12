@@ -15,8 +15,7 @@ import V2Cartman from "./V2Cartman";
 import { useRef } from "react";
 
 export interface RefType {
-  [key:string]: HTMLDivElement | null;
-
+  [key: string]: HTMLDivElement | null;
 }
 
 export default function V2BentoGrid({
@@ -40,7 +39,6 @@ export default function V2BentoGrid({
   return (
     <BentoGrid className={className}>
       {items.map((item: any, i) => {
-
         if (filter === "All") {
           return (
             <BentoGridItem
@@ -110,7 +108,7 @@ const items = [
   },
   {
     section: "Projects",
-    title: "Enhance your social media presence with creatorcards",
+    title: "Enhance your social media presence with Creator Cards.",
     description: (
       <div className="flex gap-1 flex-wrap items-center">
         <Badge name="Next.js" />
@@ -153,7 +151,8 @@ const items = [
   },
   {
     section: "Projects",
-    title: "Keep a feed of newest releases from your favorite artists",
+    title:
+      "Stay up to date with a feed of the newest releases from your favorite artists",
     description: (
       <div className="flex gap-1 flex-wrap">
         <Badge name="React Native" />

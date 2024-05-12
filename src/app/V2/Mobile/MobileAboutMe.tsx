@@ -2,7 +2,7 @@
 const MobileAboutMe = () => {
   return (
     <div className="flex flex-col mt-16 gap-6">
-      <h1 className="text-white text-lg ">About Me</h1>
+      <h1 className="text-white text-xl ">About Me</h1>
       <p className="text-gray-400">
         I'm a software engineer with a knack for solving problems with software.
         I have experience working with Next.js, TypeScript, Node.js, and more.

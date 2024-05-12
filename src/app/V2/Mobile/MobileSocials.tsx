@@ -1,8 +1,5 @@
-
-
-
 const MobileSocials = () => {
-  return(
+  return (
     <div className="">
       <ul className="flex flex-row justify-start gap-6 md:gap-8">
         <li>
@@ -73,9 +70,10 @@ const MobileSocials = () => {
             </svg>
           </a>
         </li>
+
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default MobileSocials
+export default MobileSocials;
