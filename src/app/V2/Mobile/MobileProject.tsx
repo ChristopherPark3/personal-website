@@ -1,18 +1,24 @@
 import { SquareArrowOutUpRight } from "lucide-react";
-
+import { ReactNode } from "react";
 export interface MobileProjectType {
-  projectName: string;
-  href: string;
+  name: string;
+  href?: string;
+  component: ReactNode
 }
 
-const MobileProject = ({ href, projectName }: MobileProjectProps) => {
+const MobileProject = ({ href, name, component }: MobileProjectType) => {
   return (
-    <h1 className="text-gray-200 font-light text-lg flex flex-row gap-2 items-center">
-      {projectName}{" "}
-      <a href={href} target="_blank">
-        <SquareArrowOutUpRight className="h-5 w-5" />
-      </a>
-    </h1>
+    <div className="flex flex-col">
+      <h1 className="text-gray-200 font-light text-lg flex flex-row gap-2 items-center">
+        {name}{" "}
+        {href && (
+          <a href={href} target="_blank">
+            <SquareArrowOutUpRight className="h-5 w-5" />
+          </a>
+        )}
+      </h1>
+      {component}
+    </div>
   );
 };
 
