@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 const MobileAboutMe = () => {
   return (
-    <div className="flex flex-col mt-16 gap-6">
+    <div className="flex flex-col mt-16 gap-6 max-w-[40rem]">
       <h1 className="text-white text-xl ">About Me</h1>
       <p className="text-gray-400">
         I'm a software engineer with a knack for solving problems with software.

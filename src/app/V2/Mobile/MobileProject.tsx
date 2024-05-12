@@ -17,7 +17,7 @@ const MobileProject = ({
   techs,
 }: MobileProjectType) => {
   return (
-    <div className="flex flex-col gap-3 mb-2">
+    <div className="flex flex-col gap-3 mb-2  max-w-[40rem]">
       <h1 className="text-gray-300 font-light text-lg flex flex-row gap-2 items-center">
         {name}{" "}
         {href && (

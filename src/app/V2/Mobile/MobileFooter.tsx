@@ -3,7 +3,7 @@
 const MobileFooter = () => {
 
   return (
-    <div className="flex">
+    <div className="flex flex-1 items-start">
       <p className="mx-auto text-sm mt-6 max-w-md leading-relaxed text-gray-500">
           Made with amazing tools/libraries like{" "}
           <a className="hover:text-gray-300" href="https://nextjs.org/">

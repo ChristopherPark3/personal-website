@@ -7,7 +7,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 
 const MobileHero = () => {
   return (
-    <div className="flex flex-col gap-4 mt-4">
+    <div className="flex flex-col gap-4 mt-4  max-w-[40rem]">
       <div className="flex flex-col gap-2">
         <h1 className="text-gray-200 text-shadow-xs shadow-slate-50 text-5xl text-wrap font-semibold sm:text-7xl">
           Christopher Park
