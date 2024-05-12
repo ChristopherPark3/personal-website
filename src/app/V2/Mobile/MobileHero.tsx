@@ -25,7 +25,12 @@ const MobileHero = () => {
         >
           View my resume
         </a>
-        <SquareArrowOutUpRight className="h-5 w-5 text-neutral-300" />
+        <a
+          href="https://christopher-park-resume.s3.amazonaws.com/SWE+Resume+Most+Updated.pdf"
+          target="_blank"
+        >
+          <SquareArrowOutUpRight className="h-5 w-5 text-neutral-300" />
+        </a>
       </div>
     </div>
   );
