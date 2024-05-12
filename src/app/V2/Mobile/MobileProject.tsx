@@ -18,7 +18,7 @@ const MobileProject = ({
 }: MobileProjectType) => {
   return (
     <div className="flex flex-col gap-3 mb-2">
-      <h1 className="text-gray-200 font-light text-lg flex flex-row gap-2 items-center">
+      <h1 className="text-gray-300 font-light text-lg flex flex-row gap-2 items-center">
         {name}{" "}
         {href && (
           <a href={href} target="_blank">

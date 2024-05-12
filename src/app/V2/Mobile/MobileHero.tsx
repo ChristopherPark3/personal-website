@@ -9,7 +9,7 @@ const MobileHero = () => {
   return (
     <div className="flex flex-col gap-4 mt-4">
       <div className="flex flex-col gap-2">
-        <h1 className="text-gray-200 text-shadow-xs shadow-slate-50 text-5xl text-wrap font-semibold">
+        <h1 className="text-gray-200 text-shadow-xs shadow-slate-50 text-5xl text-wrap font-semibold sm:text-7xl">
           Christopher Park
         </h1>
         <p className="text-lg text-gray-500">
